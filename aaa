@@ -1,0 +1,73 @@
+# udp_client.py
+import socket
+import argparse
+import sys
+
+
+def main():
+    parser = argparse.ArgumentParser(description="UDP Client")
+    parser.add_argument("--dst-ip", required=True, help="Destination IP address")
+    parser.add_argument("--dst-port", required=True, type=int, help="Destination port")
+    parser.add_argument("--src-ip", required=True, help="Source IP address")
+    parser.add_argument("--data", required=True, help="Data to send")
+
+    args = parser.parse_args()
+
+    sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+
+    try:
+        # 送信元IP固定（ポートはOSに任せる）
+        sock.bind((args.src_ip, 0))
+    except OSError as e:
+        print(f"ERROR: bind failed: {e}")
+        sys.exit(1)
+
+    try:
+        sock.sendto(args.data.encode("utf-8"), (args.dst_ip, args.dst_port))
+        print(f"Sent: {args.data}")
+    except OSError as e:
+        print(f"ERROR: send failed: {e}")
+        sys.exit(1)
+    finally:
+        sock.close()
+
+
+if __name__ == "__main__":
+    main()
+
+
+
+
+# udp_server.py
+import socket
+import argparse
+import sys
+
+
+def main():
+    parser = argparse.ArgumentParser(description="UDP Server")
+    parser.add_argument("--port", required=True, type=int, help="Receive port")
+
+    args = parser.parse_args()
+
+    sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+
+    try:
+        # 全NICで待受
+        sock.bind(("0.0.0.0", args.port))
+    except OSError as e:
+        print(f"ERROR: bind failed: {e}")
+        sys.exit(1)
+
+    print(f"Listening on port {args.port}")
+
+    while True:
+        data, addr = sock.recvfrom(4096)
+        print(f"Received from {addr[0]}:{addr[1]} -> {data.decode('utf-8')}")
+
+
+if __name__ == "__main__":
+    main()
+
+
+
