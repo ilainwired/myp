@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<!-- saved from url=(0264)file:///C:/Users/flisz/Downloads/ISO26262_%25E6%25A9%259F%25E8%2583%25BD%25E5%25AE%2589%25E5%2585%25A8%25E6%25BC%2594%25E7%25BF%2592_%25E5%2585%25A8%25E8%25A7%25A3%25E7%25AD%2594_%25E5%258D%2598%25E4%25BD%2593HTML_%25E6%2594%25B9%25E8%25A8%2582%25E7%2589%2588.html -->
+<html lang="ja"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ISO 26262 機能安全演習｜S1〜S7 解答と詳細解説</title><style>
+:root{--ink:#d8e7f6;--muted:#8da6ba;--border:#294255;--primary:#53bfcc;--blue:#81b5f0;--accent:#f6cc7b;--panel:#142333;--deep:#0b1421;--bg:#0d1724;--top:#0a111b;--ok:#5ed0a3}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:"Noto Sans CJK JP","Yu Gothic","Meiryo",system-ui,sans-serif;font-size:15px;line-height:1.83;-webkit-font-smoothing:antialiased}a{color:#80d5e8}a:hover{text-decoration:underline}.layout{display:grid;grid-template-columns:268px minmax(0,1fr)}aside{height:100vh;position:sticky;top:0;padding:28px 13px;background:var(--top);border-right:1px solid var(--border);overflow:auto}aside .brand{display:block;margin:0 10px 7px;font-size:17px;color:#f3f9ff;font-weight:800;letter-spacing:.04em}aside .tiny{margin:0 10px 22px;color:var(--muted);font-size:11px}nav a{display:flex;gap:10px;align-items:baseline;text-decoration:none;color:#adbdcb;padding:9px 11px;margin:3px 0;border-radius:8px;font-size:11.9px;line-height:1.4}nav a span{font-weight:800;color:#70ccdb;min-width:43px;font-size:11px}nav a:hover{background:#1c3348;color:white;text-decoration:none}main{min-width:0;max-width:1500px;padding:26px clamp(22px,4vw,62px) 80px}.hero{background:linear-gradient(130deg,#142e47 0%,#12273a 50%,#131b2a 100%);padding:42px 40px;margin-bottom:26px;border:1px solid #2b5370;border-radius:18px;position:relative;overflow:hidden}.hero:after{content:"";position:absolute;right:-95px;top:-75px;width:380px;height:380px;border:75px solid #22608033;border-radius:50%;pointer-events:none}.eyebrow{letter-spacing:.18em;color:#76d4df;text-transform:uppercase;font-size:11px;font-weight:800}.hero h1{margin:12px 0;font-size:clamp(25px,3.4vw,42px);line-height:1.35;letter-spacing:.02em;color:white}.hero p{max-width:780px;font-size:14px;color:#b1c7d8}.badgerow{display:flex;gap:8px;flex-wrap:wrap;margin-top:23px}.chip{padding:5px 11px;border:1px solid #3c6177;border-radius:30px;color:#b7d3e4;font-size:12px;background:#14334b}.paper{scroll-margin-top:18px;background:var(--panel);border-radius:14px;border:1px solid var(--border);margin:24px 0 32px;overflow:hidden;box-shadow:0 6px 30px #050d1825}.section-head{padding:24px 31px 20px;background:linear-gradient(90deg,#183449,#172b3c);border-bottom:1px solid var(--border)}.section-head h2{margin:8px 0 0;font-size:24px;font-weight:800;color:#f6fbff;line-height:1.5}.section-code{display:inline-block;font-size:13px;color:#092235;font-weight:900;letter-spacing:.04em;background:#8bd8e5;padding:3px 12px;border-radius:5px}.section-kind{font-size:11px;color:#b5d1dd;margin-left:12px;letter-spacing:.12em}.section-body{padding:24px 31px 34px}.lead{font-size:16px;color:#d9ebf4;font-weight:550;margin-top:0}h4{font-size:18px;margin:27px 0 11px;color:#8ad5e2}p{margin:11px 0 17px}ol.steps{padding-left:23px}ol.steps li{padding-bottom:9px}.table-scroller{overflow:auto;margin:19px 0 24px;border:1px solid var(--border);border-radius:10px}table{width:100%;border-collapse:collapse;font-size:13.2px;line-height:1.75}thead th{background:#264257;color:#dff6fb;font-weight:800;text-align:left;padding:12px 14px;border-right:1px solid #416075}tbody tr:nth-child(even){background:#182d3e}tbody td{vertical-align:top;padding:12px 13px;border-top:1px solid #304457;border-right:1px solid #304457;min-width:80px}tbody td:first-child{white-space:nowrap;font-weight:600;color:#8be1e2}td:last-child,th:last-child{border-right:0}code{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:.92em;background:#263d4f;padding:2px 5px;border-radius:4px;color:#b7f4ce}.note{margin:21px 0;background:#193b43;border-left:4px solid #58c9ba;padding:15px 18px;color:#cbeae7;border-radius:5px;font-size:13.7px}.note.warn{background:#382d26;border-color:#e9b068;color:#f0dac4}.chart{margin:22px 0 26px;background:#f7faff;color:#123;border-radius:10px;border:1px solid #d0ddea;padding:18px;overflow-x:auto}.diagram{display:block;width:100%;height:auto;max-height:680px;min-width:600px}.chart figcaption{text-align:center;color:#576777;font-size:12px;padding-top:8px;line-height:1.5}.unused-source{margin-top:35px;border-top:1px solid #324658;padding-top:15px}.source summary{cursor:pointer;font-size:13px;color:#8edce7;user-select:none}.sources-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px;margin-top:18px}.orig-slide{background:#e6edf4;border-radius:8px;color:#1a3850;padding:10px}.orig-slide img{display:block;width:100%;height:auto;object-fit:contain}.slide-num{font-weight:800;font-size:11px;margin-bottom:6px}.bottom{padding:20px 0;color:var(--muted);font-size:12px}.top-actions{position:fixed;bottom:16px;right:20px;display:flex;gap:7px;z-index:30}.top-actions button{cursor:pointer;background:#19415a;color:#f2ffff;border:1px solid #4e8d9c;padding:10px 16px;border-radius:26px;font-weight:650}.top-actions button:hover{background:#29657c}@media(max-width:900px){.layout{display:block}aside{height:auto;position:relative;border-bottom:1px solid var(--border);border-right:0;padding:14px}aside nav{display:flex;overflow:auto;gap:4px}aside nav a{min-width:180px;margin:0}aside .brand{font-size:14px}aside .tiny{display:none}main{padding:18px}.hero{padding:22px}.section-body,.section-head{padding:20px}table{font-size:12px}.section-head h2{font-size:21px}}@media print{*{print-color-adjust:exact;-webkit-print-color-adjust:exact}body{background:white;color:#162638;font-size:11px}.layout{display:block}aside,.top-actions{display:none}main{max-width:none;margin:0;padding:0}.hero{border-radius:0;margin:0 0 12px;padding:22px;color:white}.paper{margin:0 0 16px;border:1px solid #c1d2df;border-radius:0;box-shadow:none;break-before:page;page-break-before:always}.section-head{padding:12px 16px}.section-head h2{font-size:20px}.section-body{padding:12px 16px;color:#223746}.section-body .lead{color:#1a4057}.note{color:#173b37;background:#e9f3f1}.note.warn{color:#543923;background:#faf1e6}.table-scroller{overflow:visible}tbody td{background:#f5f8fa!important;color:#20374b;border-color:#cbd5dc}tbody td:first-child{color:#005e72}table{font-size:10px}thead th{background:#dce8ef;color:#1b3950;border-color:#bbcbd6}.chart{break-inside:avoid}.diagram{max-height:520px}.source{display:none}h4{color:#14576a}code{background:#e9f1f4;color:#16456c}a{color:#18597b}@page{size:A4 landscape;margin:11mm}}
+</style></head><body><div class="layout"><aside><div class="brand">ISO 26262 / Functional Safety</div><div class="tiny">演習S1〜S7｜全16枚を分析<br>解答 + FTA図 + TSC図 + 解説</div><nav><a href="file:///C:/Users/flisz/Downloads/ISO26262_%25E6%25A9%259F%25E8%2583%25BD%25E5%25AE%2589%25E5%2585%25A8%25E6%25BC%2594%25E7%25BF%2592_%25E5%2585%25A8%25E8%25A7%25A3%25E7%25AD%2594_%25E5%258D%2598%25E4%25BD%2593HTML_%25E6%2594%25B9%25E8%25A8%2582%25E7%2589%2588.html#section-0"><span>S1</span>ASILの判定｜EPS</a><a href="file:///C:/Users/flisz/Downloads/ISO26262_%25E6%25A9%259F%25E8%2583%25BD%25E5%25AE%2589%25E5%2585%25A8%25E6%25BC%2594%25E7%25BF%2592_%25E5%2585%25A8%25E8%25A7%25A3%25E7%25AD%2594_%25E5%258D%2598%25E4%25BD%2593HTML_%25E6%2594%25B9%25E8%25A8%2582%25E7%2589%2588.html#section-1"><span>S2</span>EPS図を反映した安全要求｜①FSR ②TSR ③SSR ④HSR</a><a href="file:///C:/Users/flisz/Downloads/ISO26262_%25E6%25A9%259F%25E8%2583%25BD%25E5%25AE%2589%25E5%2585%25A8%25E6%25BC%2594%25E7%25BF%2592_%25E5%2585%25A8%25E8%25A7%25A3%25E7%25AD%2594_%25E5%258D%2598%25E4%25BD%2593HTML_%25E6%2594%25B9%25E8%25A8%2582%25E7%2589%2588.html#section-2"><span>S3-基礎</span>FTA・FMEAの読み方｜説明資料 3〜5枚目</a><a href="file:///C:/Users/flisz/Downloads/ISO26262_%25E6%25A9%259F%25E8%2583%25BD%25E5%25AE%2589%25E5%2585%25A8%25E6%25BC%2594%25E7%25BF%2592_%25E5%2585%25A8%25E8%25A7%25A3%25E7%25AD%2594_%25E5%258D%2598%25E4%25BD%2593HTML_%25E6%2594%25B9%25E8%25A8%2582%25E7%2589%2588.html#section-3"><span>S3-①</span>機能レベルのFTA｜6枚目の解答</a><a href="file:///C:/Users/flisz/Downloads/ISO26262_%25E6%25A9%259F%25E8%2583%25BD%25E5%25AE%2589%25E5%2585%25A8%25E6%25BC%2594%25E7%25BF%2592_%25E5%2585%25A8%25E8%25A7%25A3%25E7%25AD%2594_%25E5%258D%2598%25E4%25BD%2593HTML_%25E6%2594%25B9%25E8%25A8%2582%25E7%2589%2588.html#section-4"><span>S3-②</span>実装レベルのFTA｜8枚目の解答</a><a href="file:///C:/Users/flisz/Downloads/ISO26262_%25E6%25A9%259F%25E8%2583%25BD%25E5%25AE%2589%25E5%2585%25A8%25E6%25BC%2594%25E7%25BF%2592_%25E5%2585%25A8%25E8%25A7%25A3%25E7%25AD%2594_%25E5%258D%2598%25E4%25BD%2593HTML_%25E6%2594%25B9%25E8%25A8%2582%25E7%2589%2588.html#section-5"><span>S4</span>ASIL B｜メータECU TSR-01〜03</a><a href="file:///C:/Users/flisz/Downloads/ISO26262_%25E6%25A9%259F%25E8%2583%25BD%25E5%25AE%2589%25E5%2585%25A8%25E6%25BC%2594%25E7%25BF%2592_%25E5%2585%25A8%25E8%25A7%25A3%25E7%25AD%2594_%25E5%258D%2598%25E4%25BD%2593HTML_%25E6%2594%25B9%25E8%25A8%2582%25E7%2589%2588.html#section-6"><span>S5</span>ASIL D｜マイコンの安全機構</a><a href="file:///C:/Users/flisz/Downloads/ISO26262_%25E6%25A9%259F%25E8%2583%25BD%25E5%25AE%2589%25E5%2585%25A8%25E6%25BC%2594%25E7%25BF%2592_%25E5%2585%25A8%25E8%25A7%25A3%25E7%25AD%2594_%25E5%258D%2598%25E4%25BD%2593HTML_%25E6%2594%25B9%25E8%25A8%2582%25E7%2589%2588.html#section-7"><span>S6</span>ASIL C｜非Lockstep ECUの安全コンセプト</a><a href="file:///C:/Users/flisz/Downloads/ISO26262_%25E6%25A9%259F%25E8%2583%25BD%25E5%25AE%2589%25E5%2585%25A8%25E6%25BC%2594%25E7%25BF%2592_%25E5%2585%25A8%25E8%25A7%25A3%25E7%25AD%2594_%25E5%258D%2598%25E4%25BD%2593HTML_%25E6%2594%25B9%25E8%25A8%2582%25E7%2589%2588.html#section-8"><span>S7</span>ASIL B｜TSR-03のTSC・目標故障率・構成図</a><a href="file:///C:/Users/flisz/Downloads/ISO26262_%25E6%25A9%259F%25E8%2583%25BD%25E5%25AE%2589%25E5%2585%25A8%25E6%25BC%2594%25E7%25BF%2592_%25E5%2585%25A8%25E8%25A7%25A3%25E7%25AD%2594_%25E5%258D%2598%25E4%25BD%2593HTML_%25E6%2594%25B9%25E8%25A8%2582%25E7%2589%2588.html#section-9"><span>補足</span>演習解答を実装・検証へつなぐ詳細解説</a></nav></aside><main><header class="hero"><div class="eyebrow">FUNCTIONAL SAFETY / WORKED SOLUTIONS</div><h1>システム機能安全 演習<br>解答・図解・詳細解説</h1><p>16枚の講義内容と追加のEPS鮮明図を反映。設問と設計上の仮定を区別し、FTA・TSR・ASIL B/C/Dの構成を、外部ファイル不要のSVGベクター図として一体化しました。</p><div class="badgerow"><span class="chip">S1–S7 / 8演習</span><span class="chip">詳細解説</span><span class="chip">FTA / TSC 図解</span><span class="chip">見直し反映済</span><span class="chip">完全単体HTML / SVG図内蔵</span></div></header><section id="section-0" class="paper"><div class="section-head"><div><span class="section-code">S1</span><span class="section-kind">解答</span></div><h2>ASILの判定｜EPS</h2></div><div class="section-body"><p class="lead">対象：EPSソフト異常によるアシストトルク増大 → 意図しないセルフステアリング → 対向車衝突。40 km/hでの例。</p><div class="table-scroller"><table><thead><tr><th>番号</th><th>回答</th><th>根拠・想定</th></tr></thead><tbody><tr><td><b>1</b></td><td><b>S3</b></td><td>対向車との衝突で生命にかかわる重傷・致命傷が生じ得る。乗員・相手車両の被害を含める。</td></tr><tr><td><b>2</b></td><td><b>Severity：重大〜致命的傷害</b></td><td>対向車衝突時の傷害可能性によるS3。40 km/hという速度だけからSを一意に決めない。</td></tr><tr><td><b>3</b></td><td><b>E4</b>（演習の想定）</td><td>40 km/h程度で走行する状態への曝露が高頻度と仮定。実際は走行シーンの運用分布の証拠が必要。</td></tr><tr><td><b>4</b></td><td><b>Exposure：高頻度曝露</b></td><td>対向車の存在・操舵要求・該当速度帯を含む運転状況の暴露をE4と置く。単に40 km/hで走る頻度だけでは不十分で、E3の場合はASILが変化し得る。</td></tr><tr><td><b>5</b></td><td><b>ASIL D</b></td><td>S3 × E4 × C3（スライド指定: 10%以上が回避不能）→ ASIL D。</td></tr><tr><td><b>6</b></td><td><b>安全目標：意図しないアシストトルクによって車両の操舵方向が変化し、制御を失うことを防止する。</b></td><td>安全状態は、故障条件下で危険トルクの抑制／停止を実現すること。FTTIは別途決定。</td></tr></tbody></table></div><div class="note warn"><b>レビューで付記：</b> C3は資料で固定された条件。S3・E4は演習解答の前提として採用したが、HARA正式判定にはOperational Situation（運転状況）の定義、曝露データ、傷害推定の根拠が必要。いきなり「トルク0」を適用すると操舵補助喪失自体が別の危険を生む可能性があるため、故障時の遷移戦略を検証する。</div><div class="note info"><b>S2との接続：</b>このSGはS2で扱うEPSセンサ系・主演算系の故障を対象とした上位要求に当たり、S2で追加された二系統センシング／選択／サブ演算／比較制限の各機能はSG達成手段となる。一方、それらの追加だけでASIL Dの独立性・診断カバレッジが立証されたわけではない。</div></div></section>
+<section id="section-1" class="paper"><div class="section-head"><div><span class="section-code">S2</span><span class="section-kind">解答・改訂</span></div><h2>EPS図を反映した安全要求｜①FSR ②TSR ③SSR ④HSR</h2></div><div class="section-body"><p class="lead"><b>設問①〜④の回答をEPSの図中ブロックに紐づける。</b>主系には「センサ1 → センシング → 制御量演算 → ACT」、追加された安全機構（SM）系には「センサ2 → センシング2 → 優先選択 → サブ演算 → 比較・制限」がある。図に描かれたブロック同士の独立性は、後続設計で検証すべき条件である。</p><figure class="chart">
+
+
+
+<svg class="diagram" role="img" aria-label="S2 EPS図に対応する主制御系と安全機構の機能対応" width="1261pt" height="124pt" viewBox="0.00 0.00 1260.56 123.56" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(17.28 106.28)">
+<title>EPS</title>
+
+<g id="node1" class="node">
+<title>s1</title>
+<path fill="#d6ecf8" stroke="#456a89" d="M49,-89C49,-89 12,-89 12,-89 6,-89 0,-83 0,-77 0,-77 0,-65 0,-65 0,-59 6,-53 12,-53 12,-53 49,-53 49,-53 55,-53 61,-59 61,-65 61,-65 61,-77 61,-77 61,-83 55,-89 49,-89"></path>
+<text text-anchor="middle" x="30.5" y="-67.9" font-family="Noto Sans CJK JP" font-size="12.00" fill="#15334b">センサ1</text>
+</g>
+
+<g id="node2" class="node">
+<title>m1</title>
+<path fill="#e4f3fb" stroke="#456a89" d="M199,-89C199,-89 96,-89 96,-89 90,-89 84,-83 84,-77 84,-77 84,-65 84,-65 84,-59 90,-53 96,-53 96,-53 199,-53 199,-53 205,-53 211,-59 211,-65 211,-65 211,-77 211,-77 211,-83 205,-89 199,-89"></path>
+<text text-anchor="middle" x="147.5" y="-67.9" font-family="Noto Sans CJK JP" font-size="12.00" fill="#15334b">センシング（主系）</text>
+</g>
+
+<g id="edge1" class="edge">
+<title>s1-&gt;m1</title>
+<path fill="none" stroke="#577f9c" stroke-width="1.7" d="M61.12,-71C66.3,-71 71.87,-71 77.61,-71"></path>
+<polygon fill="#577f9c" stroke="#577f9c" stroke-width="1.7" points="77.89,-73.1 83.89,-71 77.89,-68.9 77.89,-73.1"></polygon>
+</g>
+
+<g id="node3" class="node">
+<title>ctrl</title>
+<path fill="#e4f3fb" stroke="#456a89" d="M604,-89C604,-89 501,-89 501,-89 495,-89 489,-83 489,-77 489,-77 489,-65 489,-65 489,-59 495,-53 501,-53 501,-53 604,-53 604,-53 610,-53 616,-59 616,-65 616,-65 616,-77 616,-77 616,-83 610,-89 604,-89"></path>
+<text text-anchor="middle" x="552.5" y="-67.9" font-family="Noto Sans CJK JP" font-size="12.00" fill="#15334b">制御量演算（主系）</text>
+</g>
+
+<g id="edge2" class="edge">
+<title>m1-&gt;ctrl</title>
+<path fill="none" stroke="#577f9c" stroke-width="1.7" d="M211.03,-71C284.57,-71 406.27,-71 482.51,-71"></path>
+<polygon fill="#577f9c" stroke="#577f9c" stroke-width="1.7" points="482.83,-73.1 488.83,-71 482.83,-68.9 482.83,-73.1"></polygon>
+</g>
+
+<g id="node6" class="node">
+<title>sel</title>
+<path fill="#dcf1e6" stroke="#456a89" d="M409,-42C409,-42 294,-42 294,-42 288,-42 282,-36 282,-30 282,-30 282,-18 282,-18 282,-12 288,-6 294,-6 294,-6 409,-6 409,-6 415,-6 421,-12 421,-18 421,-18 421,-30 421,-30 421,-36 415,-42 409,-42"></path>
+<text text-anchor="middle" x="351.5" y="-20.9" font-family="Noto Sans CJK JP" font-size="12.00" fill="#15334b">優先選択／異常系選別</text>
+</g>
+
+<g id="edge9" class="edge">
+<title>m1-&gt;sel</title>
+<path fill="none" stroke="#577f9c" stroke-width="1.7" stroke-dasharray="5,2" d="M208.86,-52.93C216.66,-50.6 222,-49 222,-49 222,-49 247.44,-44.05 275.68,-38.56"></path>
+<polygon fill="#577f9c" stroke="#577f9c" stroke-width="1.7" points="276.25,-40.59 281.74,-37.38 275.45,-36.46 276.25,-40.59"></polygon>
+<text text-anchor="middle" x="246.5" y="-52" font-family="Noto Sans CJK JP" font-size="10.00">妥当性比較</text>
+</g>
+
+<g id="node8" class="node">
+<title>cmp</title>
+<path fill="#fff0c8" stroke="#b58a43" d="M801,-48C801,-48 686,-48 686,-48 680,-48 674,-42 674,-36 674,-36 674,-24 674,-24 674,-18 680,-12 686,-12 686,-12 801,-12 801,-12 807,-12 813,-18 813,-24 813,-24 813,-36 813,-36 813,-42 807,-48 801,-48"></path>
+<text text-anchor="middle" x="743.5" y="-26.9" font-family="Noto Sans CJK JP" font-size="12.00" fill="#15334b">比較・制限（監視系）</text>
+</g>
+
+<g id="edge11" class="edge">
+<title>ctrl-&gt;cmp</title>
+<path fill="none" stroke="#577f9c" stroke-width="1.7" stroke-dasharray="5,2" d="M616.14,-53.67C625.99,-50.94 633,-49 633,-49 633,-49 648.42,-46.32 667.68,-42.98"></path>
+<polygon fill="#577f9c" stroke="#577f9c" stroke-width="1.7" points="668.22,-45.02 673.77,-41.93 667.5,-40.88 668.22,-45.02"></polygon>
+<text text-anchor="middle" x="648" y="-52" font-family="Noto Sans CJK JP" font-size="10.00">主指令</text>
+</g>
+
+<g id="node9" class="node">
+<title>gate</title>
+<path fill="#ffe2da" stroke="#c57664" d="M1043,-70C1043,-70 916,-70 916,-70 910,-70 904,-64 904,-58 904,-58 904,-44 904,-44 904,-38 910,-32 916,-32 916,-32 1043,-32 1043,-32 1049,-32 1055,-38 1055,-44 1055,-44 1055,-58 1055,-58 1055,-64 1049,-70 1043,-70"></path>
+<text text-anchor="middle" x="979.5" y="-54.4" font-family="Noto Sans CJK JP" font-size="12.00" fill="#15334b">出力側の制限／禁止</text>
+<text text-anchor="middle" x="979.5" y="-41.4" font-family="Noto Sans CJK JP" font-size="12.00" fill="#15334b">（設計で独立性を確認）</text>
+</g>
+
+<g id="edge3" class="edge">
+<title>ctrl-&gt;gate</title>
+<path fill="none" stroke="#577f9c" stroke-width="1.7" d="M616.17,-68.42C714.26,-64.37 893,-57 893,-57 893,-57 894.66,-56.88 897.51,-56.68"></path>
+<polygon fill="#577f9c" stroke="#577f9c" stroke-width="1.7" points="897.99,-58.76 903.83,-56.24 897.7,-54.57 897.99,-58.76"></polygon>
+</g>
+
+<g id="node4" class="node">
+<title>s2</title>
+<path fill="#def3e9" stroke="#456a89" d="M49,-36C49,-36 12,-36 12,-36 6,-36 0,-30 0,-24 0,-24 0,-12 0,-12 0,-6 6,0 12,0 12,0 49,0 49,0 55,0 61,-6 61,-12 61,-12 61,-24 61,-24 61,-30 55,-36 49,-36"></path>
+<text text-anchor="middle" x="30.5" y="-14.9" font-family="Noto Sans CJK JP" font-size="12.00" fill="#15334b">センサ2</text>
+</g>
+
+<g id="node5" class="node">
+<title>m2</title>
+<path fill="#def3e9" stroke="#456a89" d="M178,-36C178,-36 117,-36 117,-36 111,-36 105,-30 105,-24 105,-24 105,-12 105,-12 105,-6 111,0 117,0 117,0 178,0 178,0 184,0 190,-6 190,-12 190,-12 190,-24 190,-24 190,-30 184,-36 178,-36"></path>
+<text text-anchor="middle" x="147.5" y="-14.9" font-family="Noto Sans CJK JP" font-size="12.00" fill="#15334b">センシング2</text>
+</g>
+
+<g id="edge5" class="edge">
+<title>s2-&gt;m2</title>
+<path fill="none" stroke="#577f9c" stroke-width="1.7" d="M61.12,-18C72.55,-18 85.93,-18 98.66,-18"></path>
+<polygon fill="#577f9c" stroke="#577f9c" stroke-width="1.7" points="98.85,-20.1 104.85,-18 98.85,-15.9 98.85,-20.1"></polygon>
+</g>
+
+<g id="edge6" class="edge">
+<title>m2-&gt;sel</title>
+<path fill="none" stroke="#577f9c" stroke-width="1.7" d="M190.35,-19.24C214.95,-19.97 246.78,-20.92 275.57,-21.77"></path>
+<polygon fill="#577f9c" stroke="#577f9c" stroke-width="1.7" points="275.6,-23.88 281.66,-21.96 275.73,-19.68 275.6,-23.88"></polygon>
+</g>
+
+<g id="edge10" class="edge">
+<title>sel-&gt;ctrl</title>
+<path fill="none" stroke="#577f9c" stroke-width="1.7" stroke-dasharray="5,2" d="M421.32,-38.4C447.89,-43.96 472,-49 472,-49 472,-49 476.28,-50.18 482.85,-52"></path>
+<polygon fill="#577f9c" stroke="#577f9c" stroke-width="1.7" points="482.52,-54.09 488.86,-53.67 483.64,-50.04 482.52,-54.09"></polygon>
+<text text-anchor="middle" x="452" y="-52" font-family="Noto Sans CJK JP" font-size="10.00">選択入力</text>
+</g>
+
+<g id="node7" class="node">
+<title>sub</title>
+<path fill="#dcf1e6" stroke="#456a89" d="M610,-36C610,-36 495,-36 495,-36 489,-36 483,-30 483,-24 483,-24 483,-12 483,-12 483,-6 489,0 495,0 495,0 610,0 610,0 616,0 622,-6 622,-12 622,-12 622,-24 622,-24 622,-30 616,-36 610,-36"></path>
+<text text-anchor="middle" x="552.5" y="-14.9" font-family="Noto Sans CJK JP" font-size="12.00" fill="#15334b">サブ演算（比較基準）</text>
+</g>
+
+<g id="edge7" class="edge">
+<title>sel-&gt;sub</title>
+<path fill="none" stroke="#577f9c" stroke-width="1.7" d="M421.26,-21.93C439.13,-21.39 458.46,-20.81 476.62,-20.26"></path>
+<polygon fill="#577f9c" stroke="#577f9c" stroke-width="1.7" points="476.8,-22.35 482.73,-20.07 476.67,-18.16 476.8,-22.35"></polygon>
+</g>
+
+<g id="edge8" class="edge">
+<title>sub-&gt;cmp</title>
+<path fill="none" stroke="#577f9c" stroke-width="1.7" d="M622,-22.35C636.92,-23.3 652.78,-24.3 667.93,-25.27"></path>
+<polygon fill="#577f9c" stroke="#577f9c" stroke-width="1.7" points="667.79,-27.36 673.92,-25.65 668.06,-23.17 667.79,-27.36"></polygon>
+</g>
+
+<g id="edge12" class="edge">
+<title>cmp-&gt;gate</title>
+<path fill="none" stroke="#577f9c" stroke-width="1.7" d="M813.13,-36.16C839.58,-38.53 870.04,-41.27 897.55,-43.74"></path>
+<polygon fill="#577f9c" stroke="#577f9c" stroke-width="1.7" points="897.58,-45.85 903.74,-44.29 897.95,-41.66 897.58,-45.85"></polygon>
+<text text-anchor="middle" x="858.5" y="-45" font-family="Noto Sans CJK JP" font-size="10.00">監視・制限要求</text>
+</g>
+
+<g id="node10" class="node">
+<title>act</title>
+<path fill="#dfedfb" stroke="#456a89" d="M1214,-69C1214,-69 1090,-69 1090,-69 1084,-69 1078,-63 1078,-57 1078,-57 1078,-45 1078,-45 1078,-39 1084,-33 1090,-33 1090,-33 1214,-33 1214,-33 1220,-33 1226,-39 1226,-45 1226,-45 1226,-57 1226,-57 1226,-63 1220,-69 1214,-69"></path>
+<text text-anchor="middle" x="1152" y="-47.9" font-family="Noto Sans CJK JP" font-size="12.00" fill="#15334b">ACT（アクチュエータ）</text>
+</g>
+
+<g id="edge4" class="edge">
+<title>gate-&gt;act</title>
+<path fill="none" stroke="#577f9c" stroke-width="1.7" d="M1055.28,-51C1060.69,-51 1066.14,-51 1071.57,-51"></path>
+<polygon fill="#577f9c" stroke="#577f9c" stroke-width="1.7" points="1071.92,-53.1 1077.92,-51 1071.92,-48.9 1071.92,-53.1"></polygon>
+</g>
+</g>
+</svg>
+<figcaption>新しいEPS画像の主要ブロックを再構成した概念図。破線は比較・監視情報、赤い出力側ブロックは要求を満たすための技術上の補足（原図にある追加独立部品を意味しない）。</figcaption></figure><figure class="chart">
+
+
+
+<svg class="diagram" role="img" aria-label="S2 安全要求の階層と割付け" width="514pt" height="339pt" viewBox="0.00 0.00 514.08 339.08" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(23.04 316.04)">
+<title>G</title>
+
+<g id="node1" class="node">
+<title>SG</title>
+<path fill="#dbf0f0" stroke="#49647c" d="M341,-293C341,-293 127,-293 127,-293 121,-293 115,-287 115,-281 115,-281 115,-261 115,-261 115,-255 121,-249 127,-249 127,-249 341,-249 341,-249 347,-249 353,-255 353,-261 353,-261 353,-281 353,-281 353,-287 347,-293 341,-293"></path>
+<text text-anchor="middle" x="234" y="-274.8" font-family="Noto Sans CJK JP" font-size="14.00" fill="#143449">SG / Safety Goal</text>
+<text text-anchor="middle" x="234" y="-259.8" font-family="Noto Sans CJK JP" font-size="14.00" fill="#143449">意図しないアシストトルクを防止</text>
+</g>
+
+<g id="node2" class="node">
+<title>FSR</title>
+<path fill="#eaf3fa" stroke="#49647c" d="M398,-210C398,-210 70,-210 70,-210 64,-210 58,-204 58,-198 58,-198 58,-178 58,-178 58,-172 64,-166 70,-166 70,-166 398,-166 398,-166 404,-166 410,-172 410,-178 410,-178 410,-198 410,-198 410,-204 404,-210 398,-210"></path>
+<text text-anchor="middle" x="234" y="-191.8" font-family="Noto Sans CJK JP" font-size="14.00" fill="#143449">FSR / 機能安全要求</text>
+<text text-anchor="middle" x="234" y="-176.8" font-family="Noto Sans CJK JP" font-size="14.00" fill="#143449">センシング・主演算異常を検出して危険指令を防止</text>
+</g>
+
+<g id="edge1" class="edge">
+<title>SG-&gt;FSR</title>
+<path fill="none" stroke="#4c88aa" stroke-width="2" d="M234,-248.76C234,-248.76 234,-217.02 234,-217.02"></path>
+<polygon fill="#4c88aa" stroke="#4c88aa" stroke-width="2" points="236.45,-217.02 234,-210.02 231.55,-217.02 236.45,-217.02"></polygon>
+</g>
+
+<g id="node3" class="node">
+<title>TSR</title>
+<path fill="#eaf3fa" stroke="#49647c" d="M384,-127C384,-127 84,-127 84,-127 78,-127 72,-121 72,-115 72,-115 72,-95 72,-95 72,-89 78,-83 84,-83 84,-83 384,-83 384,-83 390,-83 396,-89 396,-95 396,-95 396,-115 396,-115 396,-121 390,-127 384,-127"></path>
+<text text-anchor="middle" x="234" y="-108.8" font-family="Noto Sans CJK JP" font-size="14.00" fill="#143449">TSR / 技術安全要求</text>
+<text text-anchor="middle" x="234" y="-93.8" font-family="Noto Sans CJK JP" font-size="14.00" fill="#143449">二系統センシング・選択・サブ演算・指令制限</text>
+</g>
+
+<g id="edge2" class="edge">
+<title>FSR-&gt;TSR</title>
+<path fill="none" stroke="#4c88aa" stroke-width="2" d="M234,-165.76C234,-165.76 234,-134.02 234,-134.02"></path>
+<polygon fill="#4c88aa" stroke="#4c88aa" stroke-width="2" points="236.45,-134.02 234,-127.02 231.55,-134.02 236.45,-134.02"></polygon>
+</g>
+
+<g id="node4" class="node">
+<title>SSR</title>
+<path fill="#f3ecfd" stroke="#49647c" d="M212,-44C212,-44 12,-44 12,-44 6,-44 0,-38 0,-32 0,-32 0,-12 0,-12 0,-6 6,0 12,0 12,0 212,0 212,0 218,0 224,-6 224,-12 224,-12 224,-32 224,-32 224,-38 218,-44 212,-44"></path>
+<text text-anchor="middle" x="112" y="-25.8" font-family="Noto Sans CJK JP" font-size="14.00" fill="#143449">SSR / ソフトウェア安全要求</text>
+<text text-anchor="middle" x="112" y="-10.8" font-family="Noto Sans CJK JP" font-size="14.00" fill="#143449">選択判定・サブ演算・比較処理</text>
+</g>
+
+<g id="edge3" class="edge">
+<title>TSR-&gt;SSR</title>
+<path fill="none" stroke="#4c88aa" stroke-width="2" d="M148,-82.76C148,-82.76 148,-51.02 148,-51.02"></path>
+<polygon fill="#4c88aa" stroke="#4c88aa" stroke-width="2" points="150.45,-51.02 148,-44.02 145.55,-51.02 150.45,-51.02"></polygon>
+</g>
+
+<g id="node5" class="node">
+<title>HSR</title>
+<path fill="#fff0e0" stroke="#49647c" d="M456,-44C456,-44 256,-44 256,-44 250,-44 244,-38 244,-32 244,-32 244,-12 244,-12 244,-6 250,0 256,0 256,0 456,0 456,0 462,0 468,-6 468,-12 468,-12 468,-32 468,-32 468,-38 462,-44 456,-44"></path>
+<text text-anchor="middle" x="356" y="-25.8" font-family="Noto Sans CJK JP" font-size="14.00" fill="#143449">HSR / ハードウェア安全要求</text>
+<text text-anchor="middle" x="356" y="-10.8" font-family="Noto Sans CJK JP" font-size="14.00" fill="#143449">冗長入力・監視回路・出力禁止</text>
+</g>
+
+<g id="edge4" class="edge">
+<title>TSR-&gt;HSR</title>
+<path fill="none" stroke="#4c88aa" stroke-width="2" d="M320,-82.76C320,-82.76 320,-51.02 320,-51.02"></path>
+<polygon fill="#4c88aa" stroke="#4c88aa" stroke-width="2" points="322.45,-51.02 320,-44.02 317.55,-51.02 322.45,-51.02"></polygon>
+</g>
+</g>
+</svg>
+<figcaption>SG → FSR → TSR → SSR / HSR。上のEPS構成に対して上位の要求から下位へ展開する。</figcaption></figure><div class="table-scroller"><table><thead><tr><th>解答番号</th><th>安全要求（図に即した記述）</th><th>EPS画像との対応</th></tr></thead><tbody><tr><td><b>① FSR</b></td><td><b>機能安全要求：</b> センシング系または制御量演算系の異常によって主系が不正なアシストトルク指令を生成した場合、その異常を検出して危険な指令がACTに伝わることを防止し、必要な安全状態へ移行すること。</td><td>原図の黄いろい「故障」2か所（センシング、制御量演算）を対象とし、SM系で意図しないアシストトルクを防止。</td></tr><tr><td><b>② TSR</b></td><td><b>技術安全要求：</b> センサ1とは別のセンサ2／センシング2、両系統の値の選択・妥当性判断、サブ演算、および主制御量と監視側の基準値の比較・制限処理を設ける。安全限界逸脱時は、規定FTTI内にACTへ伝わる指令を安全側へ制限／禁止する。</td><td>センサ2→センシング2→優先選択→サブ演算→比較・制限（SM系）。出力側の制限成立性と故障時反応をTSRで具体化。</td></tr><tr><td><b>③ SSR</b></td><td><b>ソフトウェア安全要求：</b> センサ1・センサ2の有効範囲、相関、更新周期をチェックし、有効入力の選択規則を実装する。サブ演算で許容指令を算出し、主演算出力と照合して上限／異常時の制限要求を発行する。診断周期、異常確定条件、故障ラッチと復帰条件を定義する。</td><td>優先選択ロジック、サブ演算、比較・制限の判定ロジック、診断状態管理。ソフト共通故障の対策を設計に含める。</td></tr><tr><td><b>④ HSR</b></td><td><b>ハードウェア安全要求：</b> センサ2の入力経路、センシング2の電気的入力／ADC等の保護、SM処理に必要なメモリ／実行監視、および安全側制限・禁止を実行できるアクチュエータ／ドライバ出力経路を設け、必要な故障検出・反応を実現する。</td><td>センサ2と入力系の故障検出、ドライバの禁止入力／安全出力経路、出力停止の帰還。構造上の電源・クロック・CPU共有は要評価。</td></tr></tbody></table></div><h4>図のどの故障を、どの安全機構でカバーするか</h4><div class="table-scroller"><table><thead><tr><th>原図の故障箇所</th><th>期待するSM系の働き</th><th>実装・検証上の条件</th></tr></thead><tbody><tr><td>主センシングの故障</td><td>センサ2による別入力の観測、両値の異常判定、妥当な入力の選択・異常時制限</td><td>センサ1/2で共通の物理故障、電源・配線短絡、両センサの同一誤値を見逃さないか。</td></tr><tr><td>制御量演算の故障</td><td>サブ演算による独立した比較基準を使い主指令を監視し、過大指令を制限／禁止</td><td>主系とサブ系が同じSWや同一データ破損の影響を受けるなら、独立性を主張できない。</td></tr><tr><td>比較・制限自体の故障</td><td>比較処理の自己診断、監視周期のチェック、必要に応じて独立のハードウェア出力禁止</td><td>図にあるSMを追加しただけではSM自身の単一故障・潜在故障への備えは示せない。</td></tr><tr><td>ACT／出力段の故障</td><td>監視結果に従う駆動抑制と実出力確認（必要なら出力段の別系統遮断）</td><td>センサ・ソフト対策だけで出力素子の短絡・固着は解決しない。</td></tr></tbody></table></div><div class="note warn"><b>解答の読み分け：</b>①は「達成すべき安全機能」、②は「主系＋SM系を用いた技術構成」、③は「選択・演算・比較・故障処理のSW要求」、④は「独立入力・実行監視・出力禁止を成立させるHW要求」。図のブロック名や詳細配線の一部は縮小画像のため判読に限界がある。ここでは<b>異常時の選択、サブ演算、比較・制限</b>という機能に基づき要求を記載し、検出能力やASIL適合を断定しない。</div><h4>検証可能な技術安全要求にするための追加パラメータ</h4><p>センサ間の許容差と判定時間、サブ演算の独立性、指令制限の絶対上限と物理単位、過大トルクの許容継続時間、監視更新停止時のフェイルセーフ状態、ゲート出力が効かなかった際の反応、FTTIと診断周期の余裕を記入する。教材の図だけでは閾値・時間を確定できないため、本回答では架空の数値を置いていない。</p></div></section>
+<section id="section-2" class="paper"><div class="section-head"><div><span class="section-code">S3-基礎</span><span class="section-kind">解説</span></div><h2>FTA・FMEAの読み方｜説明資料 3〜5枚目</h2></div><div class="section-body"><p>元資料の基本機能は <b>SC001（制御量算出）→ ACT</b>。安全機構は <b>SC002（上限値算出）→ SC003（上限処理）→ ACT</b> を追加する構成。</p><div class="table-scroller"><table><thead><tr><th>機能</th><th>入力・出力</th><th>危険側故障の例</th></tr></thead><tbody><tr><td>SC001 制御量算出</td><td>入力1／入力2 → 制御量</td><td>制御量が過大・符号誤り・誤更新</td></tr><tr><td>SC002 上限値算出</td><td>監視入力 → 上限値</td><td>上限値が過大・固定値化・不適切な値</td></tr><tr><td>SC003 上限処理</td><td>制御量＋上限値 → 指令値</td><td>比較・クランプ失効、誤出力、未実施</td></tr><tr><td>ACT アクチュエータ</td><td>指令値 → 物理出力</td><td>意図しない出力、駆動段故障</td></tr></tbody></table></div><div class="note info">HAZOPは意図からの逸脱でハザードを発見し、FTAは特定したトップ事象の原因の組合せを下向きに展開する。FMEAは部品・機能の故障モードから上向きに影響を見る。</div></div></section>
+<section id="section-3" class="paper"><div class="section-head"><div><span class="section-code">S3-①</span><span class="section-kind">FTA解答</span></div><h2>機能レベルのFTA｜6枚目の解答</h2></div><div class="section-body"><p class="lead">トップ事象を「車両急加速」とする、機能レベルの定性的FTA。教材の中間事象「指令値が過大」を、物理的加速と区別して展開。</p><figure class="chart">
+
+
+
+<svg class="diagram" role="img" aria-label="S3 機能レベルのFTA（論理ゲート）" width="770pt" height="469pt" viewBox="0.00 0.00 769.84 469.47" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(25.92 443.55)">
+<title>G</title>
+
+<g id="node1" class="node">
+<title>T</title>
+<path fill="#ffddd9" stroke="#c95454" stroke-width="2" d="M495.5,-417.63C495.5,-417.63 404.5,-417.63 404.5,-417.63 398.5,-417.63 392.5,-411.63 392.5,-405.63 392.5,-405.63 392.5,-393.63 392.5,-393.63 392.5,-387.63 398.5,-381.63 404.5,-381.63 404.5,-381.63 495.5,-381.63 495.5,-381.63 501.5,-381.63 507.5,-387.63 507.5,-393.63 507.5,-393.63 507.5,-405.63 507.5,-405.63 507.5,-411.63 501.5,-417.63 495.5,-417.63"></path>
+<text text-anchor="middle" x="450" y="-396.23" font-family="Noto Sans CJK JP" font-size="13.00" fill="#17334d">TOP: 車両急加速</text>
+</g>
+
+<g id="node2" class="node">
+<title>ga</title>
+<ellipse fill="#fee4c5" stroke="#52718b" stroke-width="1.5" cx="450" cy="-324.13" rx="27.51" ry="27.51"></ellipse>
+<text text-anchor="middle" x="450" y="-321.33" font-family="Noto Sans CJK JP" font-size="11.00" fill="#17334d">AND</text>
+</g>
+
+<g id="edge1" class="edge">
+<title>T-&gt;ga</title>
+<path fill="none" stroke="#6694ac" stroke-width="1.6" d="M450,-381.58C450,-374.42 450,-365.83 450,-357.54"></path>
+<polygon fill="#6694ac" stroke="#6694ac" stroke-width="1.6" points="451.93,-357.37 450,-351.87 448.08,-357.37 451.93,-357.37"></polygon>
+</g>
+
+<g id="node3" class="node">
+<title>d</title>
+<path fill="#eaf3fa" stroke="#52718b" stroke-width="1.5" d="M427.5,-264.62C427.5,-264.62 294.5,-264.62 294.5,-264.62 288.5,-264.62 282.5,-258.62 282.5,-252.62 282.5,-252.62 282.5,-240.62 282.5,-240.62 282.5,-234.62 288.5,-228.62 294.5,-228.62 294.5,-228.62 427.5,-228.62 427.5,-228.62 433.5,-228.62 439.5,-234.62 439.5,-240.62 439.5,-240.62 439.5,-252.62 439.5,-252.62 439.5,-258.62 433.5,-264.62 427.5,-264.62"></path>
+<text text-anchor="middle" x="361" y="-243.22" font-family="Noto Sans CJK JP" font-size="13.00" fill="#17334d">ACTへ危険な指令が到達</text>
+</g>
+
+<g id="edge2" class="edge">
+<title>ga-&gt;d</title>
+<path fill="none" stroke="#6694ac" stroke-width="1.6" d="M429.36,-305.61C416.35,-294.58 399.47,-280.26 385.75,-268.62"></path>
+<polygon fill="#6694ac" stroke="#6694ac" stroke-width="1.6" points="386.66,-266.87 381.22,-264.78 384.17,-269.81 386.66,-266.87"></polygon>
+</g>
+
+<g id="node4" class="node">
+<title>e</title>
+<path fill="#f7f9fc" stroke="#52718b" stroke-width="1.5" d="M613,-266.62C613,-266.62 465,-266.62 465,-266.62 459,-266.62 453,-260.62 453,-254.62 453,-254.62 453,-238.62 453,-238.62 453,-232.62 459,-226.62 465,-226.62 465,-226.62 613,-226.62 613,-226.62 619,-226.62 625,-232.62 625,-238.62 625,-238.62 625,-254.62 625,-254.62 625,-260.62 619,-266.62 613,-266.62"></path>
+<text text-anchor="middle" x="539" y="-250.22" font-family="Noto Sans CJK JP" font-size="13.00" fill="#17334d">駆動可能で加速条件が成立</text>
+<text text-anchor="middle" x="539" y="-236.22" font-family="Noto Sans CJK JP" font-size="13.00" fill="#17334d">（運行条件／作用条件）</text>
+</g>
+
+<g id="edge3" class="edge">
+<title>ga-&gt;e</title>
+<path fill="none" stroke="#6694ac" stroke-width="1.6" d="M470.64,-305.61C483.01,-295.13 498.86,-281.68 512.19,-270.37"></path>
+<polygon fill="#6694ac" stroke="#6694ac" stroke-width="1.6" points="513.65,-271.65 516.6,-266.63 511.16,-268.72 513.65,-271.65"></polygon>
+</g>
+
+<g id="node5" class="node">
+<title>go</title>
+<ellipse fill="#fee4c5" stroke="#52718b" stroke-width="1.5" cx="361" cy="-173.82" rx="22.62" ry="22.62"></ellipse>
+<text text-anchor="middle" x="361" y="-171.02" font-family="Noto Sans CJK JP" font-size="11.00" fill="#17334d">OR</text>
+</g>
+
+<g id="edge4" class="edge">
+<title>d-&gt;go</title>
+<path fill="none" stroke="#6694ac" stroke-width="1.6" d="M361,-228.48C361,-220.63 361,-211.12 361,-202.3"></path>
+<polygon fill="#6694ac" stroke="#6694ac" stroke-width="1.6" points="362.93,-202.13 361,-196.63 359.08,-202.13 362.93,-202.13"></polygon>
+</g>
+
+<g id="node6" class="node">
+<title>and1</title>
+<ellipse fill="#fee4c5" stroke="#52718b" stroke-width="1.5" cx="203" cy="-93.5" rx="27.51" ry="27.51"></ellipse>
+<text text-anchor="middle" x="203" y="-90.7" font-family="Noto Sans CJK JP" font-size="11.00" fill="#17334d">AND</text>
+</g>
+
+<g id="edge5" class="edge">
+<title>go-&gt;and1</title>
+<path fill="none" stroke="#6694ac" stroke-width="1.6" d="M340.25,-164.14C304.95,-149.4 237,-121.01 237,-121.01 237,-121.01 233.58,-118.34 228.92,-114.71"></path>
+<polygon fill="#6694ac" stroke="#6694ac" stroke-width="1.6" points="229.86,-113 224.34,-111.14 227.49,-116.04 229.86,-113"></polygon>
+</g>
+
+<g id="node9" class="node">
+<title>z</title>
+<path fill="#eaf3fa" stroke="#52718b" stroke-width="1.5" d="M466.5,-111.5C466.5,-111.5 255.5,-111.5 255.5,-111.5 249.5,-111.5 243.5,-105.5 243.5,-99.5 243.5,-99.5 243.5,-87.5 243.5,-87.5 243.5,-81.5 249.5,-75.5 255.5,-75.5 255.5,-75.5 466.5,-75.5 466.5,-75.5 472.5,-75.5 478.5,-81.5 478.5,-87.5 478.5,-87.5 478.5,-99.5 478.5,-99.5 478.5,-105.5 472.5,-111.5 466.5,-111.5"></path>
+<text text-anchor="middle" x="361" y="-90.1" font-family="Noto Sans CJK JP" font-size="13.00" fill="#17334d">SC003の出力処理が誤出力／バイパス</text>
+</g>
+
+<g id="edge6" class="edge">
+<title>go-&gt;z</title>
+<path fill="none" stroke="#6694ac" stroke-width="1.6" d="M361,-151C361,-140.54 361,-128 361,-117.4"></path>
+<polygon fill="#6694ac" stroke="#6694ac" stroke-width="1.6" points="362.93,-117.24 361,-111.74 359.08,-117.24 362.93,-117.24"></polygon>
+</g>
+
+<g id="node10" class="node">
+<title>a</title>
+<path fill="#eaf3fa" stroke="#52718b" stroke-width="1.5" d="M706,-111.5C706,-111.5 504,-111.5 504,-111.5 498,-111.5 492,-105.5 492,-99.5 492,-99.5 492,-87.5 492,-87.5 492,-81.5 498,-75.5 504,-75.5 504,-75.5 706,-75.5 706,-75.5 712,-75.5 718,-81.5 718,-87.5 718,-87.5 718,-99.5 718,-99.5 718,-105.5 712,-111.5 706,-111.5"></path>
+<text text-anchor="middle" x="605" y="-90.1" font-family="Noto Sans CJK JP" font-size="13.00" fill="#17334d">出力伝送／I/Fで指令値が過大に変質</text>
+</g>
+
+<g id="edge7" class="edge">
+<title>go-&gt;a</title>
+<path fill="none" stroke="#6694ac" stroke-width="1.6" d="M382.65,-165.87C419.07,-154.18 493.78,-130.2 546.52,-113.27"></path>
+<polygon fill="#6694ac" stroke="#6694ac" stroke-width="1.6" points="547.23,-115.07 551.87,-111.55 546.05,-111.4 547.23,-115.07"></polygon>
+</g>
+
+<g id="node7" class="node">
+<title>x</title>
+<path fill="#f5eafb" stroke="#52718b" stroke-width="1.5" d="M172,-36C172,-36 12,-36 12,-36 6,-36 0,-30 0,-24 0,-24 0,-12 0,-12 0,-6 6,0 12,0 12,0 172,0 172,0 178,0 184,-6 184,-12 184,-12 184,-24 184,-24 184,-30 178,-36 172,-36"></path>
+<text text-anchor="middle" x="92" y="-14.6" font-family="Noto Sans CJK JP" font-size="13.00" fill="#17334d">SC001が過大な制御量を算出</text>
+</g>
+
+<g id="edge8" class="edge">
+<title>and1-&gt;x</title>
+<path fill="none" stroke="#6694ac" stroke-width="1.6" d="M180.54,-77.63C163.98,-66.66 141.25,-51.61 122.96,-39.5"></path>
+<polygon fill="#6694ac" stroke="#6694ac" stroke-width="1.6" points="123.58,-37.6 117.93,-36.17 121.46,-40.81 123.58,-37.6"></polygon>
+</g>
+
+<g id="node8" class="node">
+<title>y</title>
+<path fill="#f5eafb" stroke="#52718b" stroke-width="1.5" d="M420.5,-36C420.5,-36 209.5,-36 209.5,-36 203.5,-36 197.5,-30 197.5,-24 197.5,-24 197.5,-12 197.5,-12 197.5,-6 203.5,0 209.5,0 209.5,0 420.5,0 420.5,0 426.5,0 432.5,-6 432.5,-12 432.5,-12 432.5,-24 432.5,-24 432.5,-30 426.5,-36 420.5,-36"></path>
+<text text-anchor="middle" x="315" y="-14.6" font-family="Noto Sans CJK JP" font-size="13.00" fill="#17334d">上限ガードが過大指令を遮断できない</text>
+</g>
+
+<g id="edge9" class="edge">
+<title>and1-&gt;y</title>
+<path fill="none" stroke="#6694ac" stroke-width="1.6" d="M224.34,-75.87C231.17,-70.54 237,-66 237,-66 237,-66 260.46,-51.87 281.64,-39.1"></path>
+<polygon fill="#6694ac" stroke="#6694ac" stroke-width="1.6" points="282.68,-40.72 286.4,-36.23 280.69,-37.42 282.68,-40.72"></polygon>
+</g>
+</g>
+</svg>
+<figcaption>四角＝事象、丸いAND/OR＝組合せ条件。急加速には危険指令だけでなく、アクチュエータが加速を生む条件も必要。</figcaption></figure><div class="table-scroller"><table><thead><tr><th>ゲート</th><th>定性的な論理式</th><th>読み方</th></tr></thead><tbody><tr><td>TOP</td><td><code>T = D ∧ E</code></td><td>D：危険な指令がACTに到達、E：駆動可能・加速が生じる条件</td></tr><tr><td>D</td><td><code>D = (X ∧ G) ∨ Z ∨ A</code></td><td>X：SC001の過大値、G：ガード失効、Z：SC003の誤出力／バイパス、A：出力I/Fで指令値が変質</td></tr><tr><td>防御機構の意味</td><td><code>X ∧ G</code></td><td>SC001のみ故障しても、独立したガードが健全であれば危険指令を遮断できる設計が目標。</td></tr></tbody></table></div><div class="note warn"><b>重要な見直し：</b>SC001の過大指令とガード故障をANDに置いた場合でも、共通原因故障が双方を同時に壊す可能性がある。さらにSC003が単独で誤指令を出せる場合はその単独故障枝を残す。ACTが指令と無関係に異常駆動する経路は「指令値過大」ではなく別枝として扱う。全ハザードを対象にした完全性確認では、この別枝とシステム境界の扱いも要る。</div><h4>分析の進め方</h4><ol class="steps"><li>対象動作状態（運転中／アクチュエータ電源ONなど）とトップ事象の境界を定義する。</li><li>SC001過大出力・SC002上限値異常・SC003ガード失効・ACT異常の各パスを列挙する。</li><li>ANDの両入力が本当に独立かを確認し、共通原因を抜けなく追加する。</li><li>未対策の単一故障枝を安全機構・要求・試験へ逆引きする。</li></ol></div></section>
+<section id="section-4" class="paper"><div class="section-head"><div><span class="section-code">S3-②</span><span class="section-kind">FTA解答</span></div><h2>実装レベルのFTA｜8枚目の解答</h2></div><div class="section-body"><p class="lead">入力IN1〜IN3、単一マイコン内の演算、上限処理、出力IC・ACTを含む実装レベルのFTA。元資料の構成に沿って原因を具体化。</p><figure class="chart">
+
+
+
+<svg class="diagram" role="img" aria-label="S3 実装レベルのFTA（論理ゲート）" width="787pt" height="556pt" viewBox="0.00 0.00 787.10 556.39" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(28.8 527.59)">
+<title>G</title>
+
+<g id="node1" class="node">
+<title>T</title>
+<path fill="#ffddd9" stroke="#c95454" stroke-width="2" d="M520.5,-497.79C520.5,-497.79 440.5,-497.79 440.5,-497.79 434.5,-497.79 428.5,-491.79 428.5,-485.79 428.5,-485.79 428.5,-473.79 428.5,-473.79 428.5,-467.79 434.5,-461.79 440.5,-461.79 440.5,-461.79 520.5,-461.79 520.5,-461.79 526.5,-461.79 532.5,-467.79 532.5,-473.79 532.5,-473.79 532.5,-485.79 532.5,-485.79 532.5,-491.79 526.5,-497.79 520.5,-497.79"></path>
+<text text-anchor="middle" x="480.5" y="-476.69" font-family="Noto Sans CJK JP" font-size="12.00" fill="#17334d">TOP: 車両急加速</text>
+</g>
+
+<g id="node2" class="node">
+<title>ta</title>
+<ellipse fill="#fee4c5" stroke="#52718b" stroke-width="1.3" cx="480.5" cy="-411.04" rx="23" ry="23"></ellipse>
+<text text-anchor="middle" x="480.5" y="-408.54" font-family="Noto Sans CJK JP" font-size="10.00" fill="#17334d">AND</text>
+</g>
+
+<g id="edge1" class="edge">
+<title>T-&gt;ta</title>
+<path fill="none" stroke="#6694ac" stroke-width="1.4" d="M480.5,-461.6C480.5,-454.95 480.5,-447.17 480.5,-439.77"></path>
+<polygon fill="#6694ac" stroke="#6694ac" stroke-width="1.4" points="482.32,-439.41 480.5,-434.21 478.68,-439.41 482.32,-439.41"></polygon>
+</g>
+
+<g id="node3" class="node">
+<title>c</title>
+<path fill="#eaf3fa" stroke="#52718b" stroke-width="1.3" d="M454,-361.29C454,-361.29 321,-361.29 321,-361.29 315,-361.29 309,-355.29 309,-349.29 309,-349.29 309,-337.29 309,-337.29 309,-331.29 315,-325.29 321,-325.29 321,-325.29 454,-325.29 454,-325.29 460,-325.29 466,-331.29 466,-337.29 466,-337.29 466,-349.29 466,-349.29 466,-355.29 460,-361.29 454,-361.29"></path>
+<text text-anchor="middle" x="387.5" y="-340.19" font-family="Noto Sans CJK JP" font-size="12.00" fill="#17334d">ACTへ過大な指令値が到達</text>
+</g>
+
+<g id="edge2" class="edge">
+<title>ta-&gt;c</title>
+<path fill="none" stroke="#6694ac" stroke-width="1.4" d="M462.13,-397.05C449.08,-387.82 431.3,-375.25 416.36,-364.69"></path>
+<polygon fill="#6694ac" stroke="#6694ac" stroke-width="1.4" points="417.13,-363 411.83,-361.49 415.02,-365.98 417.13,-363"></polygon>
+</g>
+
+<g id="node4" class="node">
+<title>enable</title>
+<path fill="#f7f9fc" stroke="#52718b" stroke-width="1.3" d="M658,-361.29C658,-361.29 489,-361.29 489,-361.29 483,-361.29 477,-355.29 477,-349.29 477,-349.29 477,-337.29 477,-337.29 477,-331.29 483,-325.29 489,-325.29 489,-325.29 658,-325.29 658,-325.29 664,-325.29 670,-331.29 670,-337.29 670,-337.29 670,-349.29 670,-349.29 670,-355.29 664,-361.29 658,-361.29"></path>
+<text text-anchor="middle" x="573.5" y="-340.19" font-family="Noto Sans CJK JP" font-size="12.00" fill="#17334d">ACTが駆動可能／加速を生む条件</text>
+</g>
+
+<g id="edge3" class="edge">
+<title>ta-&gt;enable</title>
+<path fill="none" stroke="#6694ac" stroke-width="1.4" d="M498.87,-397.05C511.92,-387.82 529.7,-375.25 544.64,-364.69"></path>
+<polygon fill="#6694ac" stroke="#6694ac" stroke-width="1.4" points="545.98,-365.98 549.17,-361.49 543.87,-363 545.98,-365.98"></polygon>
+</g>
+
+<g id="node5" class="node">
+<title>gor</title>
+<ellipse fill="#fee4c5" stroke="#52718b" stroke-width="1.3" cx="387.5" cy="-280.09" rx="18.4" ry="18.4"></ellipse>
+<text text-anchor="middle" x="387.5" y="-277.59" font-family="Noto Sans CJK JP" font-size="10.00" fill="#17334d">OR</text>
+</g>
+
+<g id="edge4" class="edge">
+<title>c-&gt;gor</title>
+<path fill="none" stroke="#6694ac" stroke-width="1.4" d="M387.5,-325.24C387.5,-318.59 387.5,-310.87 387.5,-303.76"></path>
+<polygon fill="#6694ac" stroke="#6694ac" stroke-width="1.4" points="389.32,-303.67 387.5,-298.47 385.68,-303.67 389.32,-303.67"></polygon>
+</g>
+
+<g id="node6" class="node">
+<title>g1</title>
+<ellipse fill="#fee4c5" stroke="#52718b" stroke-width="1.3" cx="318.5" cy="-212.14" rx="23" ry="23"></ellipse>
+<text text-anchor="middle" x="318.5" y="-209.64" font-family="Noto Sans CJK JP" font-size="10.00" fill="#17334d">AND</text>
+</g>
+
+<g id="edge5" class="edge">
+<title>gor-&gt;g1</title>
+<path fill="none" stroke="#6694ac" stroke-width="1.4" d="M374.84,-267C364.64,-257.24 350.1,-243.34 338.34,-232.11"></path>
+<polygon fill="#6694ac" stroke="#6694ac" stroke-width="1.4" points="339.49,-230.69 334.48,-228.41 336.98,-233.32 339.49,-230.69"></polygon>
+</g>
+
+<g id="node9" class="node">
+<title>post</title>
+<path fill="#eaf3fa" stroke="#52718b" stroke-width="1.3" d="M550.5,-230.14C550.5,-230.14 364.5,-230.14 364.5,-230.14 358.5,-230.14 352.5,-224.14 352.5,-218.14 352.5,-218.14 352.5,-206.14 352.5,-206.14 352.5,-200.14 358.5,-194.14 364.5,-194.14 364.5,-194.14 550.5,-194.14 550.5,-194.14 556.5,-194.14 562.5,-200.14 562.5,-206.14 562.5,-206.14 562.5,-218.14 562.5,-218.14 562.5,-224.14 556.5,-230.14 550.5,-230.14"></path>
+<text text-anchor="middle" x="457.5" y="-209.04" font-family="Noto Sans CJK JP" font-size="12.00" fill="#17334d">出力処理／I/Fが指令値を過大に改変</text>
+</g>
+
+<g id="edge6" class="edge">
+<title>gor-&gt;post</title>
+<path fill="none" stroke="#6694ac" stroke-width="1.4" d="M400.34,-267C410.13,-257.78 423.84,-244.85 435.38,-233.98"></path>
+<polygon fill="#6694ac" stroke="#6694ac" stroke-width="1.4" points="436.67,-235.27 439.21,-230.38 434.17,-232.62 436.67,-235.27"></polygon>
+</g>
+
+<g id="node7" class="node">
+<title>calc</title>
+<path fill="#eaf3fa" stroke="#52718b" stroke-width="1.3" d="M307,-162.4C307,-162.4 196,-162.4 196,-162.4 190,-162.4 184,-156.4 184,-150.4 184,-150.4 184,-138.4 184,-138.4 184,-132.4 190,-126.4 196,-126.4 196,-126.4 307,-126.4 307,-126.4 313,-126.4 319,-132.4 319,-138.4 319,-138.4 319,-150.4 319,-150.4 319,-156.4 313,-162.4 307,-162.4"></path>
+<text text-anchor="middle" x="251.5" y="-141.3" font-family="Noto Sans CJK JP" font-size="12.00" fill="#17334d">制御量経路が過大出力</text>
+</g>
+
+<g id="edge7" class="edge">
+<title>g1-&gt;calc</title>
+<path fill="none" stroke="#6694ac" stroke-width="1.4" d="M302.62,-195.56C293.74,-186.85 282.55,-175.86 272.9,-166.4"></path>
+<polygon fill="#6694ac" stroke="#6694ac" stroke-width="1.4" points="274.14,-165.06 269.15,-162.72 271.59,-167.66 274.14,-165.06"></polygon>
+</g>
+
+<g id="node8" class="node">
+<title>guard</title>
+<path fill="#eaf3fa" stroke="#52718b" stroke-width="1.3" d="M436,-162.4C436,-162.4 349,-162.4 349,-162.4 343,-162.4 337,-156.4 337,-150.4 337,-150.4 337,-138.4 337,-138.4 337,-132.4 343,-126.4 349,-126.4 349,-126.4 436,-126.4 436,-126.4 442,-126.4 448,-132.4 448,-138.4 448,-138.4 448,-150.4 448,-150.4 448,-156.4 442,-162.4 436,-162.4"></path>
+<text text-anchor="middle" x="392.5" y="-141.3" font-family="Noto Sans CJK JP" font-size="12.00" fill="#17334d">上限ガードが無効</text>
+</g>
+
+<g id="edge8" class="edge">
+<title>g1-&gt;guard</title>
+<path fill="none" stroke="#6694ac" stroke-width="1.4" d="M335.29,-196.23C345.32,-187.32 358.2,-175.87 369.2,-166.1"></path>
+<polygon fill="#6694ac" stroke="#6694ac" stroke-width="1.4" points="370.48,-167.39 373.16,-162.58 368.06,-164.67 370.48,-167.39"></polygon>
+</g>
+
+<g id="node10" class="node">
+<title>gcalc</title>
+<ellipse fill="#fee4c5" stroke="#52718b" stroke-width="1.3" cx="247.5" cy="-81.2" rx="18.4" ry="18.4"></ellipse>
+<text text-anchor="middle" x="247.5" y="-78.7" font-family="Noto Sans CJK JP" font-size="10.00" fill="#17334d">OR</text>
+</g>
+
+<g id="edge9" class="edge">
+<title>calc-&gt;gcalc</title>
+<path fill="none" stroke="#6694ac" stroke-width="1.4" d="M250.39,-126.35C249.95,-119.7 249.45,-111.98 248.98,-104.87"></path>
+<polygon fill="#6694ac" stroke="#6694ac" stroke-width="1.4" points="250.79,-104.65 248.64,-99.58 247.16,-104.89 250.79,-104.65"></polygon>
+</g>
+
+<g id="node11" class="node">
+<title>gguard</title>
+<ellipse fill="#fee4c5" stroke="#52718b" stroke-width="1.3" cx="396.5" cy="-81.2" rx="18.4" ry="18.4"></ellipse>
+<text text-anchor="middle" x="396.5" y="-78.7" font-family="Noto Sans CJK JP" font-size="10.00" fill="#17334d">OR</text>
+</g>
+
+<g id="edge12" class="edge">
+<title>guard-&gt;gguard</title>
+<path fill="none" stroke="#6694ac" stroke-width="1.4" d="M393.61,-126.35C394.05,-119.7 394.55,-111.98 395.02,-104.87"></path>
+<polygon fill="#6694ac" stroke="#6694ac" stroke-width="1.4" points="396.84,-104.89 395.36,-99.58 393.21,-104.65 396.84,-104.89"></polygon>
+</g>
+
+<g id="node12" class="node">
+<title>input1</title>
+<path fill="#f4e9f8" stroke="#52718b" stroke-width="1.3" d="M157,-36C157,-36 12,-36 12,-36 6,-36 0,-30 0,-24 0,-24 0,-12 0,-12 0,-6 6,0 12,0 12,0 157,0 157,0 163,0 169,-6 169,-12 169,-12 169,-24 169,-24 169,-30 163,-36 157,-36"></path>
+<text text-anchor="middle" x="84.5" y="-14.9" font-family="Noto Sans CJK JP" font-size="12.00" fill="#17334d">IN1/IN2異常・B1データ破損</text>
+</g>
+
+<g id="edge10" class="edge">
+<title>gcalc-&gt;input1</title>
+<path fill="none" stroke="#6694ac" stroke-width="1.4" d="M230.67,-73.88C208.28,-65.47 167.71,-50.24 134.99,-37.96"></path>
+<polygon fill="#6694ac" stroke="#6694ac" stroke-width="1.4" points="135.31,-36.13 129.81,-36.01 134.03,-39.54 135.31,-36.13"></polygon>
+</g>
+
+<g id="node13" class="node">
+<title>sc1</title>
+<path fill="#f4e9f8" stroke="#52718b" stroke-width="1.3" d="M303,-36C303,-36 192,-36 192,-36 186,-36 180,-30 180,-24 180,-24 180,-12 180,-12 180,-6 186,0 192,0 192,0 303,0 303,0 309,0 315,-6 315,-12 315,-12 315,-24 315,-24 315,-30 309,-36 303,-36"></path>
+<text text-anchor="middle" x="247.5" y="-14.9" font-family="Noto Sans CJK JP" font-size="12.00" fill="#17334d">制御量演算ソフト故障</text>
+</g>
+
+<g id="edge11" class="edge">
+<title>gcalc-&gt;sc1</title>
+<path fill="none" stroke="#6694ac" stroke-width="1.4" d="M247.5,-62.83C247.5,-56.18 247.5,-48.5 247.5,-41.45"></path>
+<polygon fill="#6694ac" stroke="#6694ac" stroke-width="1.4" points="249.32,-41.4 247.5,-36.2 245.68,-41.4 249.32,-41.4"></polygon>
+</g>
+
+<g id="node14" class="node">
+<title>limit</title>
+<path fill="#f4e9f8" stroke="#52718b" stroke-width="1.3" d="M455,-36C455,-36 338,-36 338,-36 332,-36 326,-30 326,-24 326,-24 326,-12 326,-12 326,-6 332,0 338,0 338,0 455,0 455,0 461,0 467,-6 467,-12 467,-12 467,-24 467,-24 467,-30 461,-36 455,-36"></path>
+<text text-anchor="middle" x="396.5" y="-14.9" font-family="Noto Sans CJK JP" font-size="12.00" fill="#17334d">IN3 / 上限値演算の異常</text>
+</g>
+
+<g id="edge13" class="edge">
+<title>gguard-&gt;limit</title>
+<path fill="none" stroke="#6694ac" stroke-width="1.4" d="M396.5,-62.83C396.5,-56.18 396.5,-48.5 396.5,-41.45"></path>
+<polygon fill="#6694ac" stroke="#6694ac" stroke-width="1.4" points="398.32,-41.4 396.5,-36.2 394.68,-41.4 398.32,-41.4"></polygon>
+</g>
+
+<g id="node15" class="node">
+<title>comp</title>
+<path fill="#f4e9f8" stroke="#52718b" stroke-width="1.3" d="M625,-36C625,-36 490,-36 490,-36 484,-36 478,-30 478,-24 478,-24 478,-12 478,-12 478,-6 484,0 490,0 490,0 625,0 625,0 631,0 637,-6 637,-12 637,-12 637,-24 637,-24 637,-30 631,-36 625,-36"></path>
+<text text-anchor="middle" x="557.5" y="-14.9" font-family="Noto Sans CJK JP" font-size="12.00" fill="#17334d">上限処理の比較・制限故障</text>
+</g>
+
+<g id="edge14" class="edge">
+<title>gguard-&gt;comp</title>
+<path fill="none" stroke="#6694ac" stroke-width="1.4" d="M413.43,-73.76C435.57,-65.35 475.35,-50.23 507.5,-38.01"></path>
+<polygon fill="#6694ac" stroke="#6694ac" stroke-width="1.4" points="508.38,-39.62 512.59,-36.07 507.09,-36.22 508.38,-39.62"></polygon>
+</g>
+
+<g id="node16" class="node">
+<title>common</title>
+<path fill="#fff0c8" stroke="#b88c34" stroke-width="1.3" d="M717.5,-498.79C717.5,-498.79 555.5,-498.79 555.5,-498.79 549.5,-498.79 543.5,-492.79 543.5,-486.79 543.5,-486.79 543.5,-472.79 543.5,-472.79 543.5,-466.79 549.5,-460.79 555.5,-460.79 555.5,-460.79 717.5,-460.79 717.5,-460.79 723.5,-460.79 729.5,-466.79 729.5,-472.79 729.5,-472.79 729.5,-486.79 729.5,-486.79 729.5,-492.79 723.5,-498.79 717.5,-498.79"></path>
+<text text-anchor="middle" x="636.5" y="-483.19" font-family="Noto Sans CJK JP" font-size="12.00" fill="#17334d">共通原因: 電源/メモリ/設定破損</text>
+<text text-anchor="middle" x="636.5" y="-470.19" font-family="Noto Sans CJK JP" font-size="12.00" fill="#17334d">（別途共通原因枝として確認）</text>
+</g>
+
+<g id="edge15" class="edge">
+<title>common-&gt;calc</title>
+<path fill="none" stroke="#c08c44" stroke-width="1.4" stroke-dasharray="5,2" d="M640.75,-460.47C646.89,-434.03 657.5,-388.29 657.5,-388.29 657.5,-388.29 675.5,-361.29 675.5,-361.29 675.5,-361.29 675.5,-325.29 675.5,-325.29 675.5,-325.29 643.5,-298.29 643.5,-298.29 643.5,-298.29 589.5,-234.89 589.5,-234.89 589.5,-234.89 568.5,-189.4 568.5,-189.4 568.5,-189.4 331.5,-162.4 331.5,-162.4 331.5,-162.4 328.89,-161.84 324.61,-160.93"></path>
+<polygon fill="#c08c44" stroke="#c08c44" stroke-width="1.4" points="324.81,-159.12 319.35,-159.81 324.06,-162.68 324.81,-159.12"></polygon>
+</g>
+
+<g id="edge16" class="edge">
+<title>common-&gt;guard</title>
+<path fill="none" stroke="#c08c44" stroke-width="1.4" stroke-dasharray="5,2" d="M645.59,-460.68C662.14,-427.73 695.5,-361.29 695.5,-361.29 695.5,-361.29 695.5,-325.29 695.5,-325.29 695.5,-325.29 587.5,-189.4 587.5,-189.4 587.5,-189.4 510.47,-172.02 453.24,-159.1"></path>
+<polygon fill="#c08c44" stroke="#c08c44" stroke-width="1.4" points="453.59,-157.32 448.12,-157.95 452.79,-160.87 453.59,-157.32"></polygon>
+</g>
+</g>
+</svg>
+<figcaption>破線の共通原因は、単純なANDによる独立故障モデルが破綻し得ることを示す。</figcaption></figure><div class="table-scroller"><table><thead><tr><th>故障源</th><th>代表故障モード</th><th>主な対策・検証</th></tr></thead><tbody><tr><td>IN1／IN2</td><td>断線・固着・範囲内誤値・更新停止</td><td>範囲/相関/鮮度診断、端子・ADC診断、冗長観測</td></tr><tr><td>制御量算出</td><td>オーバーフロー・符号誤り・RAM破壊・演算暴走</td><td>データ型境界試験、MPU、ECC、独立監視</td></tr><tr><td>IN3／上限値算出</td><td>監視入力の異常、閾値計算過大</td><td>別系統観測、値域監視、固定の絶対上限</td></tr><tr><td>上限処理</td><td>比較分岐故障・処理スキップ・上限値腐敗</td><td>制御と独立した比較、メモリ保護、スケジューラ監視</td></tr><tr><td>出力処理／出力IC</td><td>レジスタ異常・出力段固着・誤PWM</td><td>出力フィードバック、独立Enable遮断、ドライバ診断</td></tr><tr><td>共通原因</td><td>単一電源・共通クロック・同じRAM破壊</td><td>独立電源監視・WDT・冗長物理経路・DFA</td></tr></tbody></table></div><div class="note warn"><b>図の読み方：</b>元の機能レベルではSC003が一つのブロックだったが、実装上は「上限処理」と「出力処理」が同一ソフト／HWに束ねられる場合がある。監視が同じ故障で一緒に停止するなら“二重化”ではない。単一故障・従属故障解析を追加して安全機構を見直す。</div><h4>最小カットセット（例）</h4><p><code>{制御量算出過大, 上限処理失効}</code>、<code>{出力処理の危険側単一故障}</code>、<code>{出力ICの危険側単一故障}</code>。共通原因は独立したカットセットとして追加が必要。ACTの指令に依存しない異常駆動は本演習の「指令値過大」限定ツリーの外にあり、包括的FTAでは独立したトップ事象へのOR枝にする。加速成立条件を常時真と見なす運行状況に限る。</p></div></section>
+<section id="section-5" class="paper"><div class="section-head"><div><span class="section-code">S4</span><span class="section-kind">解答</span></div><h2>ASIL B｜メータECU TSR-01〜03</h2></div><div class="section-body"><p class="lead">SG-01「エアバッグECUの異常情報をCANで受信し、エアバッグ作動不能の警告灯を正しく点灯する」／ASIL B、FTTI「1トリップ」。</p><div class="table-scroller"><table><thead><tr><th>要求ID</th><th>TSR提案（shall文相当）</th><th>割付け／試験の着眼点</th></tr></thead><tbody><tr><td><b>TSR-01</b></td><td>メータECUは、エアバッグECUの異常ステータスを受信・解釈した際、対象警告灯の点灯要求を生成し、TFT/LED表示の指定された経路で点灯状態を維持しなければならない。</td><td>B1受信・B2描画・表示出力。正常/異常値に対する状態遷移、起動後の点灯確認。</td></tr><tr><td><b>TSR-02</b></td><td>メータECUは、対象CAN信号の通信途絶、タイムアウト、CRC/カウンタ不整合等を検出し、通信状態不明時に規定されたTFTメータ画面をブラックアウトしなければならない。その間もエアバッグの独立した警告LEDなど安全目標上必要な表示を維持しなければならない。</td><td>B1＋監視1。故障注入で通信断・値欠落・データ化け。</td></tr><tr><td><b>TSR-03</b></td><td>メータECUは、描画機能B2およびその表示出力の異常を監視し、検出時にTFT表示をブラックアウト（指定安全状態）させ、同時に必要なLED警告を妨げない構成としなければならない。</td><td>B2＋監視2＋独立表示制御。表示異常の検出とブランキング動作の分離。</td></tr></tbody></table></div><div class="note warn"><b>教材との整合：</b>15枚目のTSR-01〜03と対応するよう整理した。<b>「FTTI 1トリップ」</b>は故障検出・反応時間の具体的な上限（ms）を示していないため、トリップの定義、継続時間、診断周期を別途決める。通信異常時にTFTをブラックアウトさせるという教材例を採用したが、安全目標を満たす独立した警告LED経路が必要。警告灯が見えなくなる矛盾がないことを必ず示す。</div></div></section>
+<section id="section-6" class="paper"><div class="section-head"><div><span class="section-code">S5</span><span class="section-kind">解答</span></div><h2>ASIL D｜マイコンの安全機構</h2></div><div class="section-body"><p class="lead">前提：ASIL D、運転支援系、故障時出力停止、FTTI=100 ms、目標 SPFM≥99%、LFM≥90%、PMHF&lt;10 FIT（教材表記）。</p><figure class="chart">
+
+
+
+<svg class="diagram" role="img" aria-label="ASIL D マイコン安全アーキテクチャの例" width="1039pt" height="230pt" viewBox="0.00 0.00 1038.60 229.60" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(28.8 200.8)">
+<title>G</title>
+
+<g id="node1" class="node">
+<title>in</title>
+<path fill="#eaf3fa" stroke="#4e7090" d="M140,-124C140,-124 12,-124 12,-124 6,-124 0,-118 0,-112 0,-112 0,-92 0,-92 0,-86 6,-80 12,-80 12,-80 140,-80 140,-80 146,-80 152,-86 152,-92 152,-92 152,-112 152,-112 152,-118 146,-124 140,-124"></path>
+<text text-anchor="middle" x="76" y="-105.6" font-family="Noto Sans CJK JP" font-size="13.00" fill="#17334d">センサ／入力</text>
+<text text-anchor="middle" x="76" y="-91.6" font-family="Noto Sans CJK JP" font-size="13.00" fill="#17334d">冗長・範囲・相関監視</text>
+</g>
+
+<g id="node2" class="node">
+<title>cpu</title>
+<path fill="#e0f2ee" stroke="#4e7090" d="M337,-124C337,-124 201,-124 201,-124 195,-124 189,-118 189,-112 189,-112 189,-92 189,-92 189,-86 195,-80 201,-80 201,-80 337,-80 337,-80 343,-80 349,-86 349,-92 349,-92 349,-112 349,-112 349,-118 343,-124 337,-124"></path>
+<text text-anchor="middle" x="269" y="-105.6" font-family="Noto Sans CJK JP" font-size="13.00" fill="#17334d">CPU Lockstep + 比較器</text>
+<text text-anchor="middle" x="269" y="-91.6" font-family="Noto Sans CJK JP" font-size="13.00" fill="#17334d">安全アプリ / MPU</text>
+</g>
+
+<g id="edge1" class="edge">
+<title>in-&gt;cpu</title>
+<path fill="none" stroke="#498aa8" stroke-width="1.8" d="M152,-102C152,-102 182.94,-102 182.94,-102"></path>
+<polygon fill="#498aa8" stroke="#498aa8" stroke-width="1.8" points="182.94,-104.1 188.94,-102 182.94,-99.9 182.94,-104.1"></polygon>
+</g>
+
+<g id="node4" class="node">
+<title>smu</title>
+<path fill="#fff0c8" stroke="#4e7090" d="M545,-52C545,-52 430,-52 430,-52 424,-52 418,-46 418,-40 418,-40 418,-20 418,-20 418,-14 424,-8 430,-8 430,-8 545,-8 545,-8 551,-8 557,-14 557,-20 557,-20 557,-40 557,-40 557,-46 551,-52 545,-52"></path>
+<text text-anchor="middle" x="487.5" y="-33.6" font-family="Noto Sans CJK JP" font-size="13.00" fill="#17334d">Safety Manager</text>
+<text text-anchor="middle" x="487.5" y="-19.6" font-family="Noto Sans CJK JP" font-size="13.00" fill="#17334d">故障集約・反応制御</text>
+</g>
+
+<g id="edge4" class="edge">
+<title>cpu-&gt;smu</title>
+<path fill="none" stroke="#498aa8" stroke-width="1.8" d="M344,-79.75C344,-61.04 344,-37.33 344,-37.33 344,-37.33 411.85,-37.33 411.85,-37.33"></path>
+<polygon fill="#498aa8" stroke="#498aa8" stroke-width="1.8" points="411.85,-39.43 417.85,-37.33 411.85,-35.23 411.85,-39.43"></polygon>
+</g>
+
+<g id="node5" class="node">
+<title>ex</title>
+<path fill="#fff0c8" stroke="#4e7090" d="M577,-172C577,-172 398,-172 398,-172 392,-172 386,-166 386,-160 386,-160 386,-140 386,-140 386,-134 392,-128 398,-128 398,-128 577,-128 577,-128 583,-128 589,-134 589,-140 589,-140 589,-160 589,-160 589,-166 583,-172 577,-172"></path>
+<text text-anchor="middle" x="487.5" y="-153.6" font-family="Noto Sans CJK JP" font-size="13.00" fill="#17334d">独立監視</text>
+<text text-anchor="middle" x="487.5" y="-139.6" font-family="Noto Sans CJK JP" font-size="13.00" fill="#17334d">外部WDT / 電圧・クロック監視</text>
+</g>
+
+<g id="edge8" class="edge">
+<title>cpu-&gt;ex</title>
+<path fill="none" stroke="#498aa8" stroke-width="1.8" stroke-dasharray="5,2" d="M349.05,-113C377.22,-113 402,-113 402,-113 402,-113 402,-121.62 402,-121.62"></path>
+<polygon fill="#498aa8" stroke="#498aa8" stroke-width="1.8" points="399.9,-121.62 402,-127.62 404.1,-121.62 399.9,-121.62"></polygon>
+</g>
+
+<g id="node6" class="node">
+<title>gate</title>
+<path fill="#ffdbd5" stroke="#4e7090" d="M818,-102C818,-102 677,-102 677,-102 671,-102 665,-96 665,-90 665,-90 665,-70 665,-70 665,-64 671,-58 677,-58 677,-58 818,-58 818,-58 824,-58 830,-64 830,-70 830,-70 830,-90 830,-90 830,-96 824,-102 818,-102"></path>
+<text text-anchor="middle" x="747.5" y="-83.6" font-family="Noto Sans CJK JP" font-size="13.00" fill="#17334d">独立した出力禁止</text>
+<text text-anchor="middle" x="747.5" y="-69.6" font-family="Noto Sans CJK JP" font-size="13.00" fill="#17334d">安全出力・ドライバ遮断</text>
+</g>
+
+<g id="edge2" class="edge">
+<title>cpu-&gt;gate</title>
+<path fill="none" stroke="#498aa8" stroke-width="1.8" d="M349.09,-87.33C349.09,-87.33 658.74,-87.33 658.74,-87.33"></path>
+<polygon fill="#498aa8" stroke="#498aa8" stroke-width="1.8" points="658.74,-89.43 664.74,-87.33 658.74,-85.23 658.74,-89.43"></polygon>
+</g>
+
+<g id="node3" class="node">
+<title>mem</title>
+<path fill="#eaf3fa" stroke="#4e7090" d="M326.5,-58C326.5,-58 211.5,-58 211.5,-58 205.5,-58 199.5,-52 199.5,-46 199.5,-46 199.5,-12 199.5,-12 199.5,-6 205.5,0 211.5,0 211.5,0 326.5,0 326.5,0 332.5,0 338.5,-6 338.5,-12 338.5,-12 338.5,-46 338.5,-46 338.5,-52 332.5,-58 326.5,-58"></path>
+<text text-anchor="middle" x="269" y="-39.6" font-family="Noto Sans CJK JP" font-size="13.00" fill="#17334d">Flash CRC / ECC</text>
+<text text-anchor="middle" x="269" y="-25.6" font-family="Noto Sans CJK JP" font-size="13.00" fill="#17334d">RAM ECC / MBIST</text>
+<text text-anchor="middle" x="269" y="-11.6" font-family="Noto Sans CJK JP" font-size="13.00" fill="#17334d">レジスタ・バス診断</text>
+</g>
+
+<g id="edge5" class="edge">
+<title>mem-&gt;smu</title>
+<path fill="none" stroke="#498aa8" stroke-width="1.8" d="M338.74,-22.67C338.74,-22.67 411.68,-22.67 411.68,-22.67"></path>
+<polygon fill="#498aa8" stroke="#498aa8" stroke-width="1.8" points="411.68,-24.77 417.68,-22.67 411.68,-20.57 411.68,-24.77"></polygon>
+</g>
+
+<g id="edge7" class="edge">
+<title>smu-&gt;gate</title>
+<path fill="none" stroke="#498aa8" stroke-width="1.8" d="M465,-52.33C465,-62.66 465,-72.67 465,-72.67 465,-72.67 658.65,-72.67 658.65,-72.67"></path>
+<polygon fill="#498aa8" stroke="#498aa8" stroke-width="1.8" points="658.65,-74.77 664.65,-72.67 658.65,-70.57 658.65,-74.77"></polygon>
+</g>
+
+<g id="edge6" class="edge">
+<title>ex-&gt;gate</title>
+<path fill="none" stroke="#498aa8" stroke-width="1.8" d="M573,-127.81C573,-112.42 573,-94.67 573,-94.67 573,-94.67 658.85,-94.67 658.85,-94.67"></path>
+<polygon fill="#498aa8" stroke="#498aa8" stroke-width="1.8" points="658.85,-96.77 664.85,-94.67 658.85,-92.57 658.85,-96.77"></polygon>
+</g>
+
+<g id="edge9" class="edge">
+<title>gate-&gt;smu</title>
+<path fill="none" stroke="#498aa8" stroke-width="1.8" stroke-dasharray="5,2" d="M664.78,-65.33C596.58,-65.33 511,-65.33 511,-65.33 511,-65.33 511,-58.18 511,-58.18"></path>
+<polygon fill="#498aa8" stroke="#498aa8" stroke-width="1.8" points="513.1,-58.18 511,-52.18 508.9,-58.18 513.1,-58.18"></polygon>
+<text text-anchor="middle" x="627" y="-69" font-family="Noto Sans CJK JP" font-size="10.00">状態帰還</text>
+</g>
+
+<g id="node7" class="node">
+<title>act</title>
+<path fill="#e2f4e9" stroke="#4e7090" d="M969,-102C969,-102 879,-102 879,-102 873,-102 867,-96 867,-90 867,-90 867,-70 867,-70 867,-64 873,-58 879,-58 879,-58 969,-58 969,-58 975,-58 981,-64 981,-70 981,-70 981,-90 981,-90 981,-96 975,-102 969,-102"></path>
+<text text-anchor="middle" x="924" y="-83.6" font-family="Noto Sans CJK JP" font-size="13.00" fill="#17334d">出力段 / ACT</text>
+<text text-anchor="middle" x="924" y="-69.6" font-family="Noto Sans CJK JP" font-size="13.00" fill="#17334d">安全状態へ移行</text>
+</g>
+
+<g id="edge3" class="edge">
+<title>gate-&gt;act</title>
+<path fill="none" stroke="#498aa8" stroke-width="1.8" d="M830.07,-80C830.07,-80 860.93,-80 860.93,-80"></path>
+<polygon fill="#498aa8" stroke="#498aa8" stroke-width="1.8" points="860.93,-82.1 866.93,-80 860.93,-77.9 860.93,-82.1"></polygon>
+</g>
+</g>
+</svg>
+<figcaption>ロックステップは重要なCPU演算診断だが、電源・クロック・メモリ・周辺回路・出力遮断までを単独では保護できない。</figcaption></figure><div class="table-scroller"><table><thead><tr><th>安全機構</th><th>対象故障と反応</th><th>FTTI / 評価</th></tr></thead><tbody><tr><td>CPU Lockstep・比較器</td><td>CPU演算/制御フローの不一致→SMUへトラップ通知・故障確定</td><td>比較検出レイテンシ、比較器自己診断、共通モード故障</td></tr><tr><td>Flash ECC・CRC／SRAM ECC</td><td>メモリのビット故障・プログラム改変・多ビット障害検出</td><td>ECC診断の反応・スクラビング頻度、故障注入</td></tr><tr><td>MPU・レジスタ/バス保護</td><td>不正アドレスアクセス・安全データ改変の抑止</td><td>MPU設定完全性、保護例外の反応</td></tr><tr><td>クロック・電圧監視／外部窓WDT</td><td>クロック停止、電圧逸脱、ソフト暴走を独立検知</td><td>主CPU停止時も自律反応可能か</td></tr><tr><td>BIST / ロジック診断</td><td>起動時・運転中の潜在故障検出</td><td>BISTは実行可能性・時間・カバレッジを確認</td></tr><tr><td>Safety Manager + 独立出力禁止</td><td>異常時に出力ゲート遮断・状態ラッチ・故障通知</td><td>検知→判定→遮断→実出力停止が100 ms内か実測</td></tr></tbody></table></div><h4>100 msの反応時間予算（設計例・要実測）</h4><div class="table-scroller"><table><thead><tr><th>診断最大遅延</th><th>故障判定</th><th>禁止信号伝播</th><th>出力停止確認</th><th>余裕</th></tr></thead><tbody><tr><td>≤30 ms</td><td>≤20 ms</td><td>≤10 ms</td><td>≤20 ms</td><td>≥20 ms</td></tr></tbody></table></div><div class="note warn">この時間割は<b>数値例であって達成実績ではない</b>。実装する診断によりWorst Caseが変わるため、時間総和 ≤100 msを機能故障ごとに評価し、起動時だけ検出する故障と運転中検出できる故障を区別する。</div><h4>数値指標の妥当性</h4><p>SPFM・LFMはFMEDAの故障率配分と診断カバレッジの分類で求める。PMHFはシステムのランダムハードウェア故障に関する確率指標。<b>ASIL D対応マイコンを選んだだけではASIL Dの安全目標達成は証明できない</b>。独立性、従属故障、残余故障、センサ・ドライバ含むHW全体を評価する。</p></div></section>
+<section id="section-7" class="paper"><div class="section-head"><div><span class="section-code">S6</span><span class="section-kind">解答</span></div><h2>ASIL C｜非Lockstep ECUの安全コンセプト</h2></div><div class="section-body"><p class="lead">前提：ASIL CのEPS、故障時出力停止、FTTI=800 ms、新型Lockstepマイコンは使えない。目標 SPFM≥97%、LFM≥80%、PMHF&lt;100 FIT。</p><figure class="chart">
+
+
+
+<svg class="diagram" role="img" aria-label="ASIL C 非Lockstep ステアリング ECU TSC 例" width="1107pt" height="197pt" viewBox="0.00 0.00 1106.60 197.10" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(28.8 168.3)">
+<title>G</title>
+
+<g id="node1" class="node">
+<title>sen</title>
+<path fill="#eaf3fa" stroke="#4e7090" d="M100,-139.5C100,-139.5 12,-139.5 12,-139.5 6,-139.5 0,-133.5 0,-127.5 0,-127.5 0,-109.5 0,-109.5 0,-103.5 6,-97.5 12,-97.5 12,-97.5 100,-97.5 100,-97.5 106,-97.5 112,-103.5 112,-109.5 112,-109.5 112,-127.5 112,-127.5 112,-133.5 106,-139.5 100,-139.5"></path>
+<text text-anchor="middle" x="56" y="-121.9" font-family="Noto Sans CJK JP" font-size="12.00" fill="#17334d">トルク/角度/車速</text>
+<text text-anchor="middle" x="56" y="-108.9" font-family="Noto Sans CJK JP" font-size="12.00" fill="#17334d">入力妥当性診断</text>
+</g>
+
+<g id="node2" class="node">
+<title>cpu</title>
+<path fill="#dff4f0" stroke="#4e7090" d="M249,-119C249,-119 163,-119 163,-119 157,-119 151,-113 151,-107 151,-107 151,-76 151,-76 151,-70 157,-64 163,-64 163,-64 249,-64 249,-64 255,-64 261,-70 261,-76 261,-76 261,-107 261,-107 261,-113 255,-119 249,-119"></path>
+<text text-anchor="middle" x="206" y="-101.4" font-family="Noto Sans CJK JP" font-size="12.00" fill="#17334d">単一CPU</text>
+<text text-anchor="middle" x="206" y="-88.4" font-family="Noto Sans CJK JP" font-size="12.00" fill="#17334d">主制御 + SW診断</text>
+<text text-anchor="middle" x="206" y="-75.4" font-family="Noto Sans CJK JP" font-size="12.00" fill="#17334d">MPU / ECC / CRC</text>
+</g>
+
+<g id="edge1" class="edge">
+<title>sen-&gt;cpu</title>
+<path fill="none" stroke="#498aa8" stroke-width="1.7" d="M112.28,-108.25C112.28,-108.25 145.4,-108.25 145.4,-108.25"></path>
+<polygon fill="#498aa8" stroke="#498aa8" stroke-width="1.7" points="145.4,-110.18 150.9,-108.25 145.4,-106.33 145.4,-110.18"></polygon>
+</g>
+
+<g id="node5" class="node">
+<title>independent</title>
+<path fill="#e6ecfa" stroke="#4e7090" d="M851,-118C851,-118 682,-118 682,-118 676,-118 670,-112 670,-106 670,-106 670,-75 670,-75 670,-69 676,-63 682,-63 682,-63 851,-63 851,-63 857,-63 863,-69 863,-75 863,-75 863,-106 863,-106 863,-112 857,-118 851,-118"></path>
+<text text-anchor="middle" x="766.5" y="-100.4" font-family="Noto Sans CJK JP" font-size="12.00" fill="#17334d">独立監視系</text>
+<text text-anchor="middle" x="766.5" y="-87.4" font-family="Noto Sans CJK JP" font-size="12.00" fill="#17334d">外部窓WDT・電源/クロック監視</text>
+<text text-anchor="middle" x="766.5" y="-74.4" font-family="Noto Sans CJK JP" font-size="12.00" fill="#17334d">指令/実出力の独立妥当性監視</text>
+</g>
+
+<g id="edge5" class="edge">
+<title>sen-&gt;independent</title>
+<path fill="none" stroke="#498aa8" stroke-width="1.7" stroke-dasharray="1,5" d="M112.09,-129.25C279.98,-129.25 767,-129.25 767,-129.25 767,-129.25 767,-123.75 767,-123.75"></path>
+<polygon fill="#498aa8" stroke="#498aa8" stroke-width="1.7" points="768.93,-123.75 767,-118.25 765.08,-123.75 768.93,-123.75"></polygon>
+</g>
+
+<g id="node3" class="node">
+<title>pwm</title>
+<path fill="#fff0d9" stroke="#4e7090" d="M417,-84.5C417,-84.5 312,-84.5 312,-84.5 306,-84.5 300,-78.5 300,-72.5 300,-72.5 300,-54.5 300,-54.5 300,-48.5 306,-42.5 312,-42.5 312,-42.5 417,-42.5 417,-42.5 423,-42.5 429,-48.5 429,-54.5 429,-54.5 429,-72.5 429,-72.5 429,-78.5 423,-84.5 417,-84.5"></path>
+<text text-anchor="middle" x="364.5" y="-66.9" font-family="Noto Sans CJK JP" font-size="12.00" fill="#17334d">PWM / プリドライバ</text>
+<text text-anchor="middle" x="364.5" y="-53.9" font-family="Noto Sans CJK JP" font-size="12.00" fill="#17334d">ドライバ有効</text>
+</g>
+
+<g id="edge2" class="edge">
+<title>cpu-&gt;pwm</title>
+<path fill="none" stroke="#498aa8" stroke-width="1.7" d="M261.44,-74.25C261.44,-74.25 294.36,-74.25 294.36,-74.25"></path>
+<polygon fill="#498aa8" stroke="#498aa8" stroke-width="1.7" points="294.36,-76.18 299.86,-74.25 294.36,-72.33 294.36,-76.18"></polygon>
+</g>
+
+<g id="edge4" class="edge">
+<title>cpu-&gt;independent</title>
+<path fill="none" stroke="#498aa8" stroke-width="1.7" stroke-dasharray="5,2" d="M261.02,-101.25C261.02,-101.25 664.35,-101.25 664.35,-101.25"></path>
+<polygon fill="#498aa8" stroke="#498aa8" stroke-width="1.7" points="664.35,-103.18 669.85,-101.25 664.35,-99.33 664.35,-103.18"></polygon>
+</g>
+
+<g id="node4" class="node">
+<title>act</title>
+<path fill="#eaf3fa" stroke="#4e7090" d="M583,-84.5C583,-84.5 480,-84.5 480,-84.5 474,-84.5 468,-78.5 468,-72.5 468,-72.5 468,-54.5 468,-54.5 468,-48.5 474,-42.5 480,-42.5 480,-42.5 583,-42.5 583,-42.5 589,-42.5 595,-48.5 595,-54.5 595,-54.5 595,-72.5 595,-72.5 595,-78.5 589,-84.5 583,-84.5"></path>
+<text text-anchor="middle" x="531.5" y="-66.9" font-family="Noto Sans CJK JP" font-size="12.00" fill="#17334d">インバータ + モータ</text>
+<text text-anchor="middle" x="531.5" y="-53.9" font-family="Noto Sans CJK JP" font-size="12.00" fill="#17334d">アシスト出力</text>
+</g>
+
+<g id="edge3" class="edge">
+<title>pwm-&gt;act</title>
+<path fill="none" stroke="#498aa8" stroke-width="1.7" d="M429.07,-63.5C429.07,-63.5 462.43,-63.5 462.43,-63.5"></path>
+<polygon fill="#498aa8" stroke="#498aa8" stroke-width="1.7" points="462.43,-65.43 467.93,-63.5 462.43,-61.58 462.43,-65.43"></polygon>
+</g>
+
+<g id="edge8" class="edge">
+<title>act-&gt;independent</title>
+<path fill="none" stroke="#498aa8" stroke-width="1.7" stroke-dasharray="5,2" d="M595.09,-73.75C595.09,-73.75 664.22,-73.75 664.22,-73.75"></path>
+<polygon fill="#498aa8" stroke="#498aa8" stroke-width="1.7" points="664.22,-75.68 669.72,-73.75 664.22,-71.83 664.22,-75.68"></polygon>
+<text text-anchor="middle" x="632.5" y="-77.3" font-family="Noto Sans CJK JP" font-size="9.00">出力帰還</text>
+</g>
+
+<g id="node6" class="node">
+<title>cutoff</title>
+<path fill="#ffddd6" stroke="#4e7090" d="M1037,-55C1037,-55 914,-55 914,-55 908,-55 902,-49 902,-43 902,-43 902,-12 902,-12 902,-6 908,0 914,0 914,0 1037,0 1037,0 1043,0 1049,-6 1049,-12 1049,-12 1049,-43 1049,-43 1049,-49 1043,-55 1037,-55"></path>
+<text text-anchor="middle" x="975.5" y="-37.4" font-family="Noto Sans CJK JP" font-size="12.00" fill="#17334d">独立禁止経路</text>
+<text text-anchor="middle" x="975.5" y="-24.4" font-family="Noto Sans CJK JP" font-size="12.00" fill="#17334d">Gate disable / 電源遮断</text>
+<text text-anchor="middle" x="975.5" y="-11.4" font-family="Noto Sans CJK JP" font-size="12.00" fill="#17334d">出力帰還</text>
+</g>
+
+<g id="edge6" class="edge">
+<title>independent-&gt;cutoff</title>
+<path fill="none" stroke="#498aa8" stroke-width="1.7" d="M863.28,-90.5C918.17,-90.5 976,-90.5 976,-90.5 976,-90.5 976,-60.82 976,-60.82"></path>
+<polygon fill="#498aa8" stroke="#498aa8" stroke-width="1.7" points="977.93,-60.82 976,-55.32 974.08,-60.82 977.93,-60.82"></polygon>
+</g>
+
+<g id="edge7" class="edge">
+<title>cutoff-&gt;pwm</title>
+<path fill="none" stroke="#498aa8" stroke-width="1.7" d="M901.86,-21.25C739.49,-21.25 365,-21.25 365,-21.25 365,-21.25 365,-36.88 365,-36.88"></path>
+<polygon fill="#498aa8" stroke="#498aa8" stroke-width="1.7" points="363.08,-36.87 365,-42.38 366.93,-36.88 363.08,-36.87"></polygon>
+</g>
+</g>
+</svg>
+<figcaption>非Lockstepの単一CPU + 独立監視・独立出力禁止系。あくまで概念例であり、ASIL Cの実現性はFMEDAと故障注入で確証する。</figcaption></figure><div class="table-scroller"><table><thead><tr><th>要求クラス</th><th>対策案</th><th>検証する故障・証拠</th></tr></thead><tbody><tr><td><b>SPoF対策</b></td><td>単一CPUのSW診断（制御フロー、周期、逆演算/値域、メモリECC、Flash CRC、MPU）、外部窓WDT、電圧/クロック監視、入力妥当性、PWMと実出力の整合性監視、独立ドライバ禁止</td><td>CPUハング・演算誤り・メモリ破損・PWM固着・ドライバ誤出力の検出と実際のトルク停止</td></tr><tr><td><b>潜在故障対策</b></td><td>起動時BISTと周期自己診断、外部WDT試験、安全遮断経路の周期的オフテスト/診断帰還、比較器/ADC基準と電源監視の自己テスト</td><td>監視2次故障・禁止経路固着を次の危険故障発生前に検出できるか</td></tr><tr><td><b>安全状態</b></td><td>故障確定でアシストトルク出力を停止/制限し、運転者警告・故障ラッチ・再始動条件を規定</td><td>急激なアシスト停止に起因する追加ハザードもHARAで検討</td></tr><tr><td><b>反応時間</b></td><td>診断周期・デバウンス・外部WDTタイムアウト・ドライバ停止を積算して≤800 msを保証</td><td>最悪ケース故障注入とタイミング測定</td></tr></tbody></table></div><div class="note warn"><b>重要：</b>CPU内のSW監視だけでは、CPUが止まると監視も止まる。<b>独立した外部監視と制御経路</b>が必要。さらにモータドライバ短絡など、Gate disableだけでは止まらない故障もあるため、必要に応じてパワーステージ分離・遮断を検討する。</div><h4>800 msの時間設計（例）</h4><p><code>診断周期 200 ms + 判定 200 ms + 外部WDT確認 200 ms + 出力停止 100 ms + 余裕 100 ms = 800 ms</code>。診断経路によって累積時間が異なるため<b>全故障モードに一律適用しない</b>。</p><div class="note warn"><b>S2の図との関連：</b>S2の二重センシング・選択・サブ演算・比較制限は、本演習でも入力・指令の監視機能として活用可能。ただしS2はEPS機能の概念図、S6はASIL C・FTTI 800 ms・非Lockstep制約を満たすECU技術安全コンセプトであり、S2のブロックを流用するだけではSPFM/LFM/PMHFと故障反応の要求を満たせない。外部監視・独立遮断および監視系の潜在故障診断を加えて評価する。</div></div></section>
+<section id="section-8" class="paper"><div class="section-head"><div><span class="section-code">S7</span><span class="section-kind">解答</span></div><h2>ASIL B｜TSR-03のTSC・目標故障率・構成図</h2></div><div class="section-body"><p class="lead">スライド15のTSR-03「描画機能B2の異常を監視し、異常時はメータをブラックアウトとする」への回答。ASIL B、FTTI=1トリップ。</p><div class="table-scroller"><table><thead><tr><th>割付けID</th><th>実装レベルに具体化した要求</th><th>割付け</th></tr></thead><tbody><tr><td><b>TSR-03-01</b></td><td>B2は描画更新ごとにAlive/シーケンス情報・描画完了ステータスを生成する。監視2は更新周期と描画結果の整合性を監視し、異常を判定する。</td><td><b>SW</b>：B2 + 監視2（監視をB2自身から独立）</td></tr><tr><td><b>TSR-03-02</b></td><td>監視2の異常検出または監視2自身の異常検知により、TFT表示出力を安全側に無効化（ブランキング／TFTリセット）する。</td><td><b>HW＋SW</b>：安全出力レジスタ・独立表示Disable経路</td></tr><tr><td><b>TSR-03-03</b></td><td>監視2・表示Disable経路・表示状態帰還を定期診断し、機構不全時の故障記録／所定安全反応を実施する。警告LED経路は遮断対象から分離する。</td><td><b>HW＋SW</b>：監視2自己診断、TFT電源/Reset帰還、独立LED</td></tr></tbody></table></div><figure class="chart">
+
+
+
+<svg class="diagram" role="img" aria-label="S7 TSR-03 メータ監視2の安全コンセプト" width="1022pt" height="189pt" viewBox="0.00 0.00 1022.40 189.40" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(25.2 164.2)">
+<title>G</title>
+
+<g id="node1" class="node">
+<title>b1</title>
+<path fill="#eaf3fa" stroke="#4e7090" d="M135,-54C135,-54 12,-54 12,-54 6,-54 0,-48 0,-42 0,-42 0,-24 0,-24 0,-18 6,-12 12,-12 12,-12 135,-12 135,-12 141,-12 147,-18 147,-24 147,-24 147,-42 147,-42 147,-48 141,-54 135,-54"></path>
+<text text-anchor="middle" x="73.5" y="-36.6" font-family="Noto Sans CJK JP" font-size="13.00" fill="#17334d">B1 / CAN入力処理</text>
+<text text-anchor="middle" x="73.5" y="-22.6" font-family="Noto Sans CJK JP" font-size="13.00" fill="#17334d">TSR-02 監視1 (別系統)</text>
+</g>
+
+<g id="node2" class="node">
+<title>b2</title>
+<path fill="#e0f1fa" stroke="#4e7090" d="M286.5,-102C286.5,-102 213.5,-102 213.5,-102 207.5,-102 201.5,-96 201.5,-90 201.5,-90 201.5,-72 201.5,-72 201.5,-66 207.5,-60 213.5,-60 213.5,-60 286.5,-60 286.5,-60 292.5,-60 298.5,-66 298.5,-72 298.5,-72 298.5,-90 298.5,-90 298.5,-96 292.5,-102 286.5,-102"></path>
+<text text-anchor="middle" x="250" y="-84.6" font-family="Noto Sans CJK JP" font-size="13.00" fill="#17334d">B2 / 描画処理</text>
+<text text-anchor="middle" x="250" y="-70.6" font-family="Noto Sans CJK JP" font-size="13.00" fill="#17334d">TFT描画指令</text>
+</g>
+
+<g id="edge1" class="edge">
+<title>b1-&gt;b2</title>
+<path fill="none" stroke="#498aa8" stroke-width="1.8" d="M147.07,-48.5C195.5,-48.5 250,-48.5 250,-48.5 250,-48.5 250,-53.87 250,-53.87"></path>
+<polygon fill="#498aa8" stroke="#498aa8" stroke-width="1.8" points="247.9,-53.87 250,-59.87 252.1,-53.87 247.9,-53.87"></polygon>
+</g>
+
+<g id="node7" class="node">
+<title>led</title>
+<path fill="#e0f4e8" stroke="#4e7090" d="M310,-42C310,-42 190,-42 190,-42 184,-42 178,-36 178,-30 178,-30 178,-12 178,-12 178,-6 184,0 190,0 190,0 310,0 310,0 316,0 322,-6 322,-12 322,-12 322,-30 322,-30 322,-36 316,-42 310,-42"></path>
+<text text-anchor="middle" x="250" y="-24.6" font-family="Noto Sans CJK JP" font-size="13.00" fill="#17334d">LED警告灯の独立経路</text>
+<text text-anchor="middle" x="250" y="-10.6" font-family="Noto Sans CJK JP" font-size="13.00" fill="#17334d">SG-01を維持</text>
+</g>
+
+<g id="edge8" class="edge">
+<title>b1-&gt;led</title>
+<path fill="none" stroke="#498aa8" stroke-width="1.8" d="M147.07,-27C147.07,-27 171.96,-27 171.96,-27"></path>
+<polygon fill="#498aa8" stroke="#498aa8" stroke-width="1.8" points="171.96,-29.1 177.96,-27 171.96,-24.9 171.96,-29.1"></polygon>
+</g>
+
+<g id="node3" class="node">
+<title>tft</title>
+<path fill="#eaf3fa" stroke="#4e7090" d="M500,-137C500,-137 365,-137 365,-137 359,-137 353,-131 353,-125 353,-125 353,-107 353,-107 353,-101 359,-95 365,-95 365,-95 500,-95 500,-95 506,-95 512,-101 512,-107 512,-107 512,-125 512,-125 512,-131 506,-137 500,-137"></path>
+<text text-anchor="middle" x="432.5" y="-119.6" font-family="Noto Sans CJK JP" font-size="13.00" fill="#17334d">TFT出力回路</text>
+<text text-anchor="middle" x="432.5" y="-105.6" font-family="Noto Sans CJK JP" font-size="13.00" fill="#17334d">（表示電源・リセット）</text>
+</g>
+
+<g id="edge2" class="edge">
+<title>b2-&gt;tft</title>
+<path fill="none" stroke="#498aa8" stroke-width="1.8" d="M298.91,-98.5C298.91,-98.5 346.8,-98.5 346.8,-98.5"></path>
+<polygon fill="#498aa8" stroke="#498aa8" stroke-width="1.8" points="346.8,-100.6 352.8,-98.5 346.8,-96.4 346.8,-100.6"></polygon>
+</g>
+
+<g id="node5" class="node">
+<title>mon</title>
+<path fill="#fff0c9" stroke="#4e7090" d="M781,-85C781,-85 594,-85 594,-85 588,-85 582,-79 582,-73 582,-73 582,-55 582,-55 582,-49 588,-43 594,-43 594,-43 781,-43 781,-43 787,-43 793,-49 793,-55 793,-55 793,-73 793,-73 793,-79 787,-85 781,-85"></path>
+<text text-anchor="middle" x="687.5" y="-67.6" font-family="Noto Sans CJK JP" font-size="13.00" fill="#17334d">監視2 / B2故障検出</text>
+<text text-anchor="middle" x="687.5" y="-53.6" font-family="Noto Sans CJK JP" font-size="13.00" fill="#17334d">周期ハートビート + 描画状態監視</text>
+</g>
+
+<g id="edge4" class="edge">
+<title>b2-&gt;mon</title>
+<path fill="none" stroke="#498aa8" stroke-width="1.8" stroke-dasharray="5,2" d="M298.91,-72.5C298.91,-72.5 575.66,-72.5 575.66,-72.5"></path>
+<polygon fill="#498aa8" stroke="#498aa8" stroke-width="1.8" points="575.66,-74.6 581.66,-72.5 575.66,-70.4 575.66,-74.6"></polygon>
+</g>
+
+<g id="node4" class="node">
+<title>out</title>
+<path fill="#f0e6fc" stroke="#4e7090" d="M728,-139C728,-139 647,-139 647,-139 641,-139 635,-133 635,-127 635,-127 635,-115 635,-115 635,-109 641,-103 647,-103 647,-103 728,-103 728,-103 734,-103 740,-109 740,-115 740,-115 740,-127 740,-127 740,-133 734,-139 728,-139"></path>
+<text text-anchor="middle" x="687.5" y="-117.6" font-family="Noto Sans CJK JP" font-size="13.00" fill="#17334d">TFTメータ表示</text>
+</g>
+
+<g id="edge3" class="edge">
+<title>tft-&gt;out</title>
+<path fill="none" stroke="#498aa8" stroke-width="1.8" d="M512.13,-120C512.13,-120 628.62,-120 628.62,-120"></path>
+<polygon fill="#498aa8" stroke="#498aa8" stroke-width="1.8" points="628.62,-122.1 634.62,-120 628.62,-117.9 628.62,-122.1"></polygon>
+</g>
+
+<g id="edge5" class="edge">
+<title>tft-&gt;mon</title>
+<path fill="none" stroke="#498aa8" stroke-width="1.8" stroke-dasharray="5,2" d="M512.23,-97C559,-97 609,-97 609,-97 609,-97 609,-91.09 609,-91.09"></path>
+<polygon fill="#498aa8" stroke="#498aa8" stroke-width="1.8" points="611.1,-91.09 609,-85.09 606.9,-91.09 611.1,-91.09"></polygon>
+<text text-anchor="middle" x="547" y="-98" font-family="Noto Sans CJK JP" font-size="10.00">表示状態</text>
+</g>
+
+<g id="node6" class="node">
+<title>blank</title>
+<path fill="#ffdbd5" stroke="#4e7090" d="M960,-136C960,-136 836,-136 836,-136 830,-136 824,-130 824,-124 824,-124 824,-106 824,-106 824,-100 830,-94 836,-94 836,-94 960,-94 960,-94 966,-94 972,-100 972,-106 972,-106 972,-124 972,-124 972,-130 966,-136 960,-136"></path>
+<text text-anchor="middle" x="898" y="-118.6" font-family="Noto Sans CJK JP" font-size="13.00" fill="#17334d">独立ブランキング制御</text>
+<text text-anchor="middle" x="898" y="-104.6" font-family="Noto Sans CJK JP" font-size="13.00" fill="#17334d">TFTリセット/電源OFF</text>
+</g>
+
+<g id="edge6" class="edge">
+<title>mon-&gt;blank</title>
+<path fill="none" stroke="#498aa8" stroke-width="1.8" d="M767,-85.17C767,-92.54 767,-99 767,-99 767,-99 817.7,-99 817.7,-99"></path>
+<polygon fill="#498aa8" stroke="#498aa8" stroke-width="1.8" points="817.7,-101.1 823.7,-99 817.7,-96.9 817.7,-101.1"></polygon>
+</g>
+
+<g id="edge7" class="edge">
+<title>blank-&gt;tft</title>
+<path fill="none" stroke="#498aa8" stroke-width="1.8" d="M823.98,-101C823.98,-101 518.06,-101 518.06,-101"></path>
+<polygon fill="#498aa8" stroke="#498aa8" stroke-width="1.8" points="518.06,-98.9 512.06,-101 518.06,-103.1 518.06,-98.9"></polygon>
+</g>
+</g>
+</svg>
+<figcaption>教材の点線枠内の想定構成。監視2とTFTの出力停止経路を分離し、LED警告の継続性を確保。</figcaption></figure><div class="table-scroller"><table><thead><tr><th>目標値（HW評価の参考）</th><th>ASIL B目安</th><th>注意</th></tr></thead><tbody><tr><td>SPFM</td><td>≥90%</td><td>表示系全体の安全関連HWを対象にFMEDAで算定</td></tr><tr><td>LFM</td><td>≥60%</td><td>監視2・TFTブランキング故障の潜在故障に注意</td></tr><tr><td>PMHF</td><td>&lt;100 FIT</td><td>メータ単体に機械的に100 FITを割当てず、SGの予算配分に従う</td></tr><tr><td>FTTI</td><td>1トリップ（資料指定）</td><td>単位時間の上限・診断周期・点灯不能とブラックアウト優先度は要定義</td></tr></tbody></table></div><div class="note warn"><b>重要な仕様衝突：</b>エアバッグ作動不能の警告灯を点灯しなければならない一方で、TSR-03はメータをブラックアウトさせる。<b>TFTを消しても専用LED警告は表示できる</b>構成・故障時優先順位を明確化する必要がある。もし警告灯がTFT上だけなら本演習の安全目標と両立しないため設計のやり直しが必要。</div></div></section>
+<section id="section-9" class="paper"><div class="section-head"><div><span class="section-code">補足</span><span class="section-kind">解説</span></div><h2>演習解答を実装・検証へつなぐ詳細解説</h2></div><div class="section-body"><p class="lead">演習で作成したSG・安全要求・FTA・TSCが、本当に安全に寄与することを確認するためのチェックポイント。講義の答えを超える実務検討は「設計例・確認すべき事項」と区別する。S2の追加画像を反映し、S1・S6の関係も再整理した。</p><h4>S1：HARAの評価プロセス</h4><div class="table-scroller"><table><thead><tr><th>手順</th><th>確認内容</th><th>間違えやすい点</th></tr></thead><tbody><tr><td>1 アイテム・故障</td><td>EPS境界、意図しない操舵トルクの故障モード、影響の受け手</td><td>ASILは部品やソフト単体に先に付与するのではなく、危険事象を判定する</td></tr><tr><td>2 Operational Situation</td><td>40 km/h、対向車のある道路、曲率・操舵介入可能時間など</td><td>Exposureは故障確率ではなく、該当する運転状況への暴露</td></tr><tr><td>3 S</td><td>衝突の重症度、ドライバー・相手車・歩行者等の重篤性</td><td>相対速度80 km/hを単独でS3の数式根拠にしない</td></tr><tr><td>4 E</td><td>国内外の実使用比率・走行条件</td><td>E4はトレーニング上の仮定、車両別・用途別データで再査定</td></tr><tr><td>5 C</td><td>運転者のトルク克服可否、警告時間、回避操作の可能性</td><td>10%以上が回避困難という教材表記に従う。正式HARAでは評価基準の適合を確認</td></tr><tr><td>6 ASIL → SG</td><td>S/E/Cの組合せからASIL決定、SGを具体化</td><td>ASIL Dだから単に機能を停止すればよいとは言えない</td></tr></tbody></table></div><h4>S3：カットセット・共通原因の具体例</h4><div class="table-scroller"><table><thead><tr><th>ケース</th><th>故障→危険側への因果関係</th><th>要求する安全機構</th></tr></thead><tbody><tr><td>制御量の過大 + 正常ガード</td><td>SC001が100、許容上限50、SC003正常ならACT指令50に制限（数値は例）</td><td>SC003後の実指令値が上限以下であることを監視</td></tr><tr><td>制御量過大 + ガード失効</td><td>SC001が100、SC003がバイパス → ACT指令100で危険</td><td>独立した出力限界監視・出力停止</td></tr><tr><td>上限値が過大</td><td>SC002が誤って上限150、SC001の100がそのまま通過</td><td>SC002の上限値について固定物理上限・別基準の妥当性検査</td></tr><tr><td>IN2共通故障</td><td>IN2がSC001とSC002に供給され、共通故障で両計算が矛盾なく異常化</td><td>IN2とは独立の物理量または出力帰還を用いた診断</td></tr><tr><td>SC003後段書換</td><td>上限処理は50を出力するがPWM変換レジスタが破損し100相当になる</td><td>出力指令の読戻しと実出力監視、独立Disable</td></tr><tr><td>ACT自身の危険側異常</td><td>指令0でもハード出力段固着によりトルク発生</td><td>別の故障木OR枝で検討。出力遮断の故障許容性を設計</td></tr></tbody></table></div><h4>S5 / S6：SPFM・LFM・PMHFを評価するための証拠</h4><div class="table-scroller"><table><thead><tr><th>指標</th><th>FMEDAで分類・集計する内容</th><th>満足しない場合の主な設計見直し</th></tr></thead><tbody><tr><td>SPFM</td><td>単一点故障（SPF）、残余故障（RF）、安全故障、検出された多点故障などの故障率分類</td><td>単独でSG違反する経路の削減・診断カバレッジ向上</td></tr><tr><td>LFM</td><td>2点以上の組合せで危険を生む多点故障のうち、未検出で潜在化する故障の割合</td><td>外部監視／遮断回路の定期診断・起動時テスト・故障通知</td></tr><tr><td>PMHF</td><td>SG違反に寄与するHWランダム故障の予測平均頻度。残余・多点・従属故障を考慮</td><td>安全機構の独立化・故障率予算割付・HW部品変更</td></tr><tr><td>FTTI</td><td>故障発生から安全状態へ遷移しなければ危険となる時間</td><td>Worst Case診断周期、デバウンス、判断、停止の総和を削減</td></tr><tr><td>DFA</td><td>複数の想定独立要素の電源・クロック・メモリ・構成・製造共通点</td><td>バリア追加、独立検出・独立遮断、故障モード影響の見直し</td></tr></tbody></table></div><h4>S7：異常表示と安全状態の競合をテストする</h4><div class="table-scroller"><table><thead><tr><th>故障注入</th><th>望ましい観測結果</th><th>検証観点</th></tr></thead><tbody><tr><td>B2描画タスク停止</td><td>監視2が期限違反検出 → TFTブランキング、独立LEDは要求どおり維持</td><td>監視2の独立性・応答時間・LEDへの影響</td></tr><tr><td>B2のAliveだけ正常、描画結果破損</td><td>Aliveのみを信用せず、出力帰還等の監視で描画異常を検出</td><td>監視2が共通ソフト故障を見逃さないこと</td></tr><tr><td>TFTブランキング制御線が固着</td><td>帰還診断で不一致を検出、残余リスクをFMEDAへ反映</td><td>停止経路の潜在故障と診断被覆率</td></tr><tr><td>CAN途絶とB2停止が同時発生</td><td>TFTのブラックアウトと独立LEDによる警告を優先</td><td>通信監視1と描画監視2の優先順位・共通原因</td></tr><tr><td>TFTだけが警告灯の実装媒体</td><td>ブラックアウトにより警告を喪失するため設計として不成立</td><td>LED独立経路または安全目標に整合する代替警報設計</td></tr></tbody></table></div><div class="note warn"><b>適用上の留保：</b>講義の図だけから診断カバレッジ、独立性、故障率、FTTI達成を証明することはできない。「独立」と書いた監視系も、電源・クロック・データ経路・ソフト仕様の依存を評価しない限り独立とは扱わない。</div><h4>全演習の整合性確認と設計上の注記</h4><p class="lead">図・要求・論理を作成後に見直し、以下の重要論点を本文へ織り込み済み。独立した監査報告書ではなく、実務で使う際の確認リストとして残す。</p><div class="table-scroller"><table><thead><tr><th>対象</th><th>改訂・追記の要点</th><th>作業に必要な証拠</th></tr></thead><tbody><tr><td>S1</td><td>E4はシナリオ仮定、S3は傷害予測。EPSのSGにS2の二系統監視機構を関連づけた。</td><td>HARA表、S1→S2トレース、運行状況・車速頻度</td></tr><tr><td>S2</td><td>新しいEPS図に基づき二系統センシング・選択・サブ演算・比較制限を要求に展開。閾値/時間/遷移は未設定。</td><td>ブロック別のFSR/TSR/SSR/HSRトレーサビリティ、機能/故障注入試験</td></tr><tr><td>S3</td><td>FTAにACT・出力系、共通原因、単独故障枝と運行条件を追加。</td><td>FTA、DFA、故障注入、検出率証拠</td></tr><tr><td>S4/S7</td><td>警告灯の点灯とTFTブラックアウトの矛盾を解消。</td><td>電気回路、表示仕様、故障注入テスト</td></tr><tr><td>S5</td><td>LockstepのみではASIL Dにならない。100 msを各故障で検証。</td><td>FMEDA、Safety Manual、WCRT、HW試験</td></tr><tr><td>S6</td><td>S2のEPS入力・演算監視構成を参照し、非Lockstep制約での外部監視・独立遮断・潜在故障診断を追加。</td><td>HW故障モード、故障注入、SPFM/LFM/PMHF</td></tr></tbody></table></div><h4>用語と数値</h4><p><b>SPFM</b>＝単一故障・残余故障に対する保護の構造指標、<b>LFM</b>＝潜在的多点故障に対する保護指標、<b>PMHF</b>＝安全目標違反につながるランダムHW故障の平均発生率（FIT＝10億時間あたり1故障相当）。これらはASIL分類の代わりではなく、ASILに応じたHW設計評価の一部。</p><div class="table-scroller"><table><thead><tr><th>ASIL</th><th>SPFM</th><th>LFM</th><th>PMHF</th></tr></thead><tbody><tr><td>B</td><td>≥90%</td><td>≥60%</td><td>&lt;100 FIT</td></tr><tr><td>C</td><td>≥97%</td><td>≥80%</td><td>&lt;100 FIT</td></tr><tr><td>D</td><td>≥99%</td><td>≥90%</td><td>&lt;10 FIT</td></tr></tbody></table></div><h4>位置づけ</h4><p>安全要求・FTA・TSCの例は、提供された講義スライドを再構成した学習用の設計例であり、ISO 26262の適合性評価に代わるものではない。各ASILのハードウェアメトリクスは適用規格・対象アイテムの安全分析で確認する。</p></div></section>
+<footer class="bottom">教材に基づく学習・設計検討用の解答例。量産品の正式なHARA、FSC、TSC、FTA、FMEDA、安全ケースを代替するものではありません。</footer></main></div><div class="top-actions"><button onclick="printDoc()">印刷 / PDF保存</button><button onclick="topDoc()">↑ 上へ</button></div><script>function printDoc(){window.print()}function topDoc(){window.scrollTo({top:0,behavior:'smooth'})}</script></body></html>
